@@ -17,4 +17,8 @@ class PagesController extends Controller
     public function services() {
         return view('pages.services');
     }
+
+    public function admin() {
+        return view('pages.admin');
+    }
 }
