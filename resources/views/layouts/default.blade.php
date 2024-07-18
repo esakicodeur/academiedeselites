@@ -18,7 +18,13 @@
             @include('layouts.partials._nav')
             <!-- End of navigation -->
 
-            <x-hero-section />
+            @if (Route::is('home'))
+                <x-hero-section />
+            @elseif (Route::is('about'))
+                <x-hero-section-about />
+            @elseif (Route::is('services'))
+                <x-hero-section-services />
+            @endif
         </div>
     </header>
 

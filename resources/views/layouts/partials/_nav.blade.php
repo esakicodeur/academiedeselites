@@ -6,13 +6,13 @@
 
     <ul>
         <li>
-            <a class="active" href="{{ route('home') }}">Accueil</a>
+            <a class="{{ set_active_route('home') }}" href="{{ route('home') }}">Accueil</a>
         </li>
         <li>
-            <a href="{{ route('about') }}">Apropos</a>
+            <a class="{{ set_active_route('about') }}" href="{{ route('about') }}">Apropos</a>
         </li>
         <li>
-            <a href="#">Services</a>
+            <a class="{{ set_active_route('services') }}" href="{{ route('services') }}">Services</a>
         </li>
         <li>
             <a href="#">Blog</a>
@@ -40,13 +40,13 @@
 
     <ul>
         <li>
-            <a class="active" href="{{ route('home') }}">Accueil</a>
+            <a class="{{ set_active_route('home') }}" href="{{ route('home') }}">Accueil</a>
         </li>
         <li>
-            <a href="{{ route('about') }}">Apropos</a>
+            <a class="{{ set_active_route('about') }}" href="{{ route('about') }}">Apropos</a>
         </li>
         <li>
-            <a href="services.html">Services</a>
+            <a class="{{ set_active_route('services') }}" href="{{ route('services') }}">Services</a>
         </li>
         <li>
             <a href="blog.html">Blog</a>
