@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Contact;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
@@ -19,6 +20,8 @@ class PagesController extends Controller
     }
 
     public function admin() {
-        return view('pages.admin');
+        return view('pages.admin', [
+            'messages' => Contact::orderBy('created_at', 'desc')->paginate(25)
+        ]);
     }
 }
