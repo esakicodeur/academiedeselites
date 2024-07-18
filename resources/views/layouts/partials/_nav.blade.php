@@ -18,7 +18,7 @@
             <a href="#">Blog</a>
         </li>
         <li>
-            <a href="#" class="button black">Contactez-nous</a>
+            <a href="{{ route('contact.create') }}" class="button black">Contactez-nous</a>
         </li>
     </ul>
 </nav>

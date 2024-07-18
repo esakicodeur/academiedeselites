@@ -24,6 +24,8 @@
                 <x-hero-section-about />
             @elseif (Route::is('services'))
                 <x-hero-section-services />
+            @elseif (Route::is('contact.create'))
+                <x-hero-section-contact />
             @endif
         </div>
     </header>
@@ -34,6 +36,10 @@
     @include('layouts.partials._footer')
     <!-- End of footer -->
 
-    <script src="script.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous"></script>
+    @include('flashy::message')
 </body>
 </html>

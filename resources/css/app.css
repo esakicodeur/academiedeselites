@@ -745,7 +745,7 @@ nav.mobile-nav, .mobile-menu-container {
     justify-content: center;
 }
 
-input[type='text'],
+/* input[type='text'],
 input[type='email'],
 input[type='tel'],
 textarea {
@@ -802,9 +802,9 @@ input[type='email'] {
 
 .contact-section .contact-detail .contact-info ul li {
     margin-bottom: 10px;
-}
+} */
 
-.contact-section .contact-detail .contact-info ul .social-medias img {
+.row .social-medias img {
     margin: 10px;
     width: 30px;
     height: 30px;
@@ -951,7 +951,7 @@ input[type='email'] {
 }
 
 @media (max-width: 800px) {
-    .contact-section .contact-detail .contact-form {
+    /* .contact-section .contact-detail .contact-form {
         width: 400px;
     }
 
@@ -963,7 +963,7 @@ input[type='email'] {
     .contact-section .contact-detail .contact-form .group input[type='text'],
     .contact-section .contact-detail .contact-form .group input[type='email'] {
         width: 100%;
-    }
+    } */
 
     .hero-section .left h1 {
         font-size: 40px;

@@ -1,4 +1,4 @@
-@extends('layouts.default', ['title' => 'Acceuil'])
+@extends('layouts.default', ['title' => 'Services'])
 
 @section('content')
 <div class="wrapper">
