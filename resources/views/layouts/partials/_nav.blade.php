@@ -9,13 +9,13 @@
             <a class="{{ set_active_route('home') }}" href="{{ route('home') }}">Accueil</a>
         </li>
         <li>
-            <a class="{{ set_active_route('about') }}" href="{{ route('about') }}">Apropos</a>
+            <a class="{{ set_active_route('about') }}" href="{{ route('about') }}">A propos</a>
         </li>
         <li>
             <a class="{{ set_active_route('services') }}" href="{{ route('services') }}">Services</a>
         </li>
         <li>
-            <a href="#">Blog</a>
+            <a class="" href="#">Blog</a>
         </li>
         <li>
             <a href="{{ route('contact.create') }}" class="button black">Contactez-nous</a>

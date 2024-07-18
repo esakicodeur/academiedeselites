@@ -41,6 +41,16 @@
                     </tr>
                 </tbody>
             </table>
+
+            <h3>Nos réseaux sociaux</h3>
+
+            <div class="social-medias">
+                <a href="#"><img src="images/facebook.png" alt=""></a>
+                <a href="#"><img src="images/twitter.png" alt=""></a>
+                <a href="#"><img src="images/linkedin.png" alt=""></a>
+                <a href="#"><img src="images/instagram.png" alt=""></a>
+                <a href="#"><img src="images/youtube.png" alt=""></a>
+            </div>
         </div>
         <div class="col-md-6">
             <h3>Entrer en contact avec nous</h3>

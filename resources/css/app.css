@@ -63,7 +63,7 @@ header {
     width: 100%;
 }
 
-nav {
+.navigation {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -78,12 +78,12 @@ nav {
     transition: all 500ms ease;
 }
 
-nav .logo {
+.navigation .logo {
     margin: 0;
     padding: 0;
 }
 
-nav.scrolled {
+.navigation.scrolled {
     background: #070917;
     box-shadow: 0 16px 14px -8px rgba(0, 0, 0, 0.3);
     border-radius: 0 0 14px 14px;
@@ -91,14 +91,14 @@ nav.scrolled {
     padding: 12px;
 }
 
-nav ul {
+.navigation ul {
     display: flex;
     align-items: center;
     gap: 60px;
     list-style: none;
 }
 
-nav ul li a {
+.navigation ul li a {
     font-family: "montserrat", sans-serif;
     font-weight: bold;
     font-size: 16px;
@@ -805,12 +805,11 @@ input[type='email'] {
 } */
 
 .row .social-medias img {
-    margin: 10px;
-    width: 30px;
-    height: 30px;
+    height: 40px;
+    margin-right: 10px;
 }
 
-.active {
+.navigation .active {
     color: #FB6FA1;
 }
 
