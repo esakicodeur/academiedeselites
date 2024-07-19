@@ -49,7 +49,7 @@
                             <td>{{ $message->ville }}</td>
                             <td>
                                 <div class="d-flex gap-2 w-100 justify-content-end">
-                                    <button class="btn btn-primary">View</button>
+                                    <a href="{{ route('admin.contact.show', ['slug' => $message->getSlug(), 'contact' => $message]) }}" class="btn btn-primary">View</a>
                                 </div>
                             </td>
                         </tr>

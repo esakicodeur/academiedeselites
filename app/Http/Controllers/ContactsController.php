@@ -12,6 +12,18 @@ class ContactsController extends Controller
         return view('contacts.create');
     }
 
+    public function show(string $slug, Contact $contact) {
+        $expectedSlug = $contact->getSlug();
+
+        if ($slug !== $expectedSlug) {
+            return to_route('contacts.show', ['slug' => $expectedSlug, 'contact' => $contact]);
+        }
+
+        return view('contacts.show', [
+            'contact' => $contact
+        ]);
+    }
+
     public function store(ContactFormRequest $request) {
         $contact = Contact::create($request->validated());
 
