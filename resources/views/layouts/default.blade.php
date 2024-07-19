@@ -26,6 +26,10 @@
                 <x-hero-section-services />
             @elseif (Route::is('contact.create'))
                 <x-hero-section-contact />
+            @elseif (Route::is('blog.index'))
+                <x-hero-section-blog />
+            @elseif (Route::is('blog.show'))
+                <x-hero-section-blog />
             @endif
         </div>
     </header>

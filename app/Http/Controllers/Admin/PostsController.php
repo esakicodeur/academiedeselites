@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\PostFormRequest;
 use App\Models\Post;
+use App\Models\Tag;
 use Illuminate\Http\Request;
 
 class PostsController extends Controller
@@ -29,7 +30,8 @@ class PostsController extends Controller
     public function create()
     {
         return view('admin.posts.form', [
-            'post' => new Post()
+            'post' => new Post(),
+            'tags' => Tag::pluck('name', 'id'),
         ]);
     }
 
@@ -42,6 +44,7 @@ class PostsController extends Controller
     public function store(PostFormRequest $request)
     {
         $post = Post::create($request->validated());
+        $post->tags()->sync($request->validated('tags'));
 
         return to_route('admin.post.index')->with('success', 'L\'article a bien été créé.');
     }
@@ -55,7 +58,8 @@ class PostsController extends Controller
     public function edit(Post $post)
     {
         return view('admin.posts.form', [
-            'post' => $post
+            'post' => $post,
+            'tags' => Tag::pluck('name', 'id'),
         ]);
     }
 
@@ -69,6 +73,7 @@ class PostsController extends Controller
     public function update(PostFormRequest $request, Post $post)
     {
         $post->update($request->validated());
+        $post->tags()->sync($request->validated('tags'));
 
         return to_route('admin.post.index')->with('success', 'L\'article a bien été modifié.');
     }

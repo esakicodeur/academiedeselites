@@ -811,6 +811,8 @@ input[type='email'] {
 
 .navigation .active {
     color: #FB6FA1;
+    border-bottom: 5px solid #FB6FA1;
+    padding-bottom: 5px;
 }
 
 @media (max-width: 1100px) {

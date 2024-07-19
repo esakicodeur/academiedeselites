@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     @vite(['resources/css/app.css', 'resources/css/main.css', 'resources/js/app.js', 'resources/js/main.js'])
+    <link href="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/css/tom-select.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/js/tom-select.complete.min.js"></script>
     <title>@yield('title') | Administration</title>
 </head>
 <body>
@@ -55,5 +57,8 @@
         @yield('content')
     </div>
 
+    <script>
+        new TomSelect('select[multiple]', { plugins: {remove_button: {title: 'Supprimer'}} })
+    </script>
 </body>
 </html>

@@ -1,9 +1,9 @@
 @php
-    $label ??= null;
     $type ??= 'text';
     $class ??= null;
     $name ??= '';
     $value ??= '';
+    $label ??= ucfirst($name);
 @endphp
 
 <p @class(["form-group", $class])>

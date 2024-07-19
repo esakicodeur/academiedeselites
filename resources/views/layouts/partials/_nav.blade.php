@@ -1,7 +1,7 @@
 <!-- Desktop navigation menu -->
 <nav class="navigation">
     <div class="logo">
-        <a href="index.html"><img src="images/Logo-desktop.png" alt="logo"></a>
+        <a href="{{ route('home') }}"><img src="images/Logo-desktop.png" alt="logo"></a>
     </div>
 
     <ul>
@@ -15,7 +15,7 @@
             <a class="{{ set_active_route('services') }}" href="{{ route('services') }}">Services</a>
         </li>
         <li>
-            <a class="" href="#">Blog</a>
+            <a class="{{ set_active_route('blog.index') }}" href="{{ route('blog.index') }}">Blog</a>
         </li>
         <li>
             <a href="{{ route('contact.create') }}" class="button black">Contactez-nous</a>
@@ -49,10 +49,10 @@
             <a class="{{ set_active_route('services') }}" href="{{ route('services') }}">Services</a>
         </li>
         <li>
-            <a href="blog.html">Blog</a>
+            <a class="{{ set_active_route('blog.index') }}" href="{{ route('blog.index') }}">Blog</a>
         </li>
         <li>
-            <a href="contact.html" class="button black">Contactez-nous</a>
+            <a href="{{ route('contact.create') }}" class="button black">Contactez-nous</a>
         </li>
     </ul>
 </div>

@@ -15,6 +15,8 @@
 
         @include('shared.input', ['type' => 'textarea', 'label' => 'Description', 'name' => 'description', 'value' => $post->description])
 
+        @include('shared.select', ['label' => 'Tags', 'name' => 'tags', 'value' => $post->tags()->pluck('id'), 'multiple' => true, 'tags' => $tags])
+
         @include('shared.checkbox', ['label' => 'Active', 'name' => 'active', 'value' => $post->active])
 
         <p>
