@@ -26,7 +26,6 @@ class PostFormRequest extends FormRequest
         return [
             'title' => ['required', 'min:8'],
             'description' => ['required', 'min:8'],
-            'active' => ['required', 'boolean'],
             'tags' => ['array', 'exists:tags,id','required']
         ];
     }

@@ -27,7 +27,10 @@ Route::get('/contact', [ContactsController::class, 'create'])->name('contact.cre
 Route::post('/contact', [ContactsController::class, 'store'])->name('contact.store');
 
 Route::get('/student', [StudentsController::class, 'create'])->name('student.create');
+Route::post('/student', [StudentsController::class, 'store'])->name('student.store');
+
 Route::get('/teacher', [TeachersController::class, 'create'])->name('teacher.create');
+Route::post('/teacher', [TeachersController::class, 'store'])->name('teacher.store');
 
 Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/', [PagesController::class, 'admin'])->name('admin');

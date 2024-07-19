@@ -9,6 +9,24 @@
 </head>
 <body>
     <div id="page" class="site">
+        <div class="container mt-5">
+            @if (session('success'))
+                <div class="alert alert-success">
+                    {{ session('success') }}
+                </div>
+            @endif
+
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <div class="my-0">
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </div>
+                </div>
+            @endif
+        </div>
+
         @yield('content')
     </div>
 
