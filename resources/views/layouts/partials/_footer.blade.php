@@ -3,7 +3,7 @@
         <div class="footer-grid">
             <div class="box">
                 <a href="index.html">
-                    <img src="images/Logo-footer.png" alt="logo">
+                    <img src="{{ asset('images/Logo-footer.png') }}" alt="logo">
                 </a>
                 <div class="card">
                     <h4>S'inscrire à la Newsletter</h4>

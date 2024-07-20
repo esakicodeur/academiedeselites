@@ -12,7 +12,7 @@
             <section class="section-one">
                 <div class="section-down">
                     <div class="left">
-                        <img src="images/service-img-3.png" alt="mage-section">
+                        <img src="{{ asset('images/service-img-3.png') }}" alt="mage-section">
                     </div>
 
                     <div class="right">

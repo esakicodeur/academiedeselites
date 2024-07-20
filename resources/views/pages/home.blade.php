@@ -13,10 +13,10 @@
 
         <div class="section-down">
             <div class="left">
-                <img src="images/Image-section.png" alt="mage-section">
+                <img src="{{ asset('images/Image-section.png') }}" alt="mage-section">
             </div>
             <div class="left-mobile">
-                <img src="images/Image-section-mobile.png" alt="mage-section">
+                <img src="{{ asset('images/Image-section-mobile.png') }}" alt="mage-section">
             </div>
 
             <div class="right">
@@ -40,7 +40,7 @@
                 <h2>Exposez votre difficulté</h2>
                 <p>Laissez-nous un message whatsApp en scannant le code QR ci-dessous, pour qu'on vous abonne à notre AETchat.</p>
                 <div class="qr-code">
-                    <img src="images/Slice 2.png" alt="qr-code">
+                    <img src="{{ asset('images/Slice 2.png') }}" alt="qr-code">
                 </div>
             </div>
             <div class="card-ade">
@@ -91,10 +91,10 @@
             </div>
 
             <div class="left">
-                <img src="images/Image-section-2.png" alt="mage-section">
+                <img src="{{ asset('images/Image-section-2.png') }}" alt="mage-section">
             </div>
             <div class="left-mobile left-mobile-2">
-                <img src="images/Image-section-2-mobile.png" alt="mage-section">
+                <img src="{{ asset('images/Image-section-2-mobile.png') }}" alt="mage-section">
             </div>
         </div>
 

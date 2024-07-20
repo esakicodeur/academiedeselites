@@ -19,6 +19,7 @@
         <div class="row">
             <div class="col-md-4 col-sm-3">
                 <div class="bg-light p-5 mb-5">
+                    <h2>Catégories</h2>
                     <ul class="list-group">
                         @foreach ($categories as $category)
                             <a href="{{ route('by-category', ['slug' => $category->getSlug(), 'category' => $category]) }}" class="text-decoration-none fw-bold"><li class="list-group-item">{{ $category->name }}</li></a>
@@ -52,40 +53,40 @@
 
         <div class="livrets">
             <div class="livret">
-                <img src="images/6eme.png" alt="">
+                <img src="{{ asset('images/6eme.png') }}" alt="">
             </div>
             <div class="livret">
-                <img src="images/5eme.png" alt="">
+                <img src="{{ asset('images/5eme.png') }}" alt="">
             </div>
             <div class="livret">
-                <img src="images/4eme.png" alt="">
+                <img src="{{ asset('images/4eme.png') }}" alt="">
             </div>
             <div class="livret">
-                <img src="images/3eme.png" alt="">
+                <img src="{{ asset('images/3eme.png') }}" alt="">
             </div>
             <div class="livret">
-                <img src="images/2ndeA.png" alt="">
+                <img src="{{ asset('images/2ndeA.png') }}" alt="">
             </div>
             <div class="livret">
-                <img src="images/2ndeC.png" alt="">
+                <img src="{{ asset('images/2ndeC.png') }}" alt="">
             </div>
             <div class="livret">
-                <img src="images/1ereA.png" alt="">
+                <img src="{{ asset('images/1ereA.png') }}" alt="">
             </div>
             <div class="livret">
-                <img src="images/1ereD.png" alt="">
+                <img src="{{ asset('images/1ereD.png') }}" alt="">
             </div>
             <div class="livret">
-                <img src="images/1ereC.png" alt="">
+                <img src="{{ asset('images/1ereC.png') }}" alt="">
             </div>
             <div class="livret">
-                <img src="images/TleA.png" alt="">
+                <img src="{{ asset('images/TleA.png') }}" alt="">
             </div>
             <div class="livret">
-                <img src="images/TleD.png" alt="">
+                <img src="{{ asset('images/TleD.png') }}" alt="">
             </div>
             <div class="livret">
-                <img src="images/TleC.png" alt="">
+                <img src="{{ asset('images/TleC.png') }}" alt="">
             </div>
         </div>
     </section>

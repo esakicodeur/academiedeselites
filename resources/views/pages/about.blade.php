@@ -11,7 +11,7 @@
         <div class="equipe">
             <div class="person">
                 <div class="person-img">
-                    <img src="images/person-1.png" alt="">
+                    <img src="{{ asset('images/person-1.png') }}" alt="">
                 </div>
                 <div class="person-content">
                     <h2>Felix Ohswald</h2>
@@ -20,7 +20,7 @@
             </div>
             <div class="person">
                 <div class="person-img">
-                    <img src="images/person-2.png" alt="">
+                    <img src="{{ asset('images/person-2.png') }}" alt="">
                 </div>
                 <div class="person-content">
                     <h2>Felix Ohswald</h2>
@@ -29,7 +29,7 @@
             </div>
             <div class="person">
                 <div class="person-img">
-                    <img src="images/person-1.png" alt="">
+                    <img src="{{ asset('images/person-1.png') }}" alt="">
                 </div>
                 <div class="person-content">
                     <h2>Felix Ohswald</h2>
@@ -38,7 +38,7 @@
             </div>
             <div class="person">
                 <div class="person-img">
-                    <img src="images/person-2.png" alt="">
+                    <img src="{{ asset('images/person-2.png') }}" alt="">
                 </div>
                 <div class="person-content">
                     <h2>Felix Ohswald</h2>

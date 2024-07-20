@@ -1,7 +1,7 @@
 <!-- Desktop navigation menu -->
 <nav class="navigation">
     <div class="logo">
-        <a href="{{ route('home') }}"><img src="images/Logo-desktop.png" alt="logo"></a>
+        <a href="{{ route('home') }}"><img src="{{ asset('images/Logo-desktop.png') }}" alt="logo"></a>
     </div>
 
     <ul>
@@ -26,16 +26,16 @@
 
 <nav class="mobile-nav">
     <div class="logo">
-        <img src="images/Logo-Mobile.png" alt="logo">
+        <img src="{{ asset('images/Logo-Mobile.png') }}" alt="logo">
     </div>
     <div class="menu-icon">
-        <img src="images/Menu-bars.png" alt="logo">
+        <img src="{{ asset('images/Menu-bars.png') }}" alt="logo">
     </div>
 </nav>
 
 <div class="mobile-menu-container">
     <div class="close-icon">
-        <img src="images/XOutline.png" alt="XOutline">
+        <img src="{{ asset('images/XOutline.png') }}" alt="XOutline">
     </div>
 
     <ul>
