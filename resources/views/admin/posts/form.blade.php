@@ -6,7 +6,7 @@
 
     <h1>@yield('title')</h1>
 
-    <form action="{{ route($post->exists ? 'admin.post.update' : 'admin.post.store', $post) }}" method="POST">
+    <form action="{{ route($post->exists ? 'admin.post.update' : 'admin.post.store', $post) }}" method="POST" enctype="multipart/form-data" class="bg-light py-5 px-5">
 
         @csrf
         @method($post->exists ? 'put' : 'post')
@@ -15,8 +15,18 @@
 
         @include('shared.input', ['type' => 'textarea', 'label' => 'Description', 'name' => 'description', 'value' => $post->description])
 
+        <p class="input-group">
+            <input type="file" name="image" class="form-control @error('image') is-invalid @enderror" id="image">
+            <label class="input-group-text" for="image">Upload</label>
+            @error('image')
+                <span class="invalid-feedback">
+                    {{ $message }}
+                </span>
+            @enderror
+        </p>
+
         <p class="form-group">
-            <label for="category">Catégorie</label>
+            <label for="category" class="form-label">Catégorie</label>
             <select class="form-control @error('category_id') is-invalid @enderror" name="category_id" id="category">
                 <option value="">Sélectionner une catégorie</option>
                 @foreach ($categories as $category)

@@ -1,6 +1,8 @@
 <div class="post">
     <div class="post-img">
-        <a href="{{ route('blog.show', ['slug' => $post->getSlug(), 'post' => $post]) }}"><img src="{{ asset('images/blog-1.png') }}" alt=""></a>
+        <a href="{{ route('blog.show', ['slug' => $post->getSlug(), 'post' => $post]) }}">
+            <img src="{{ $post->imageUrl() }}" alt="image" class="w-100 object-fit-cover rounded-4" style="max-height: 15rem;">
+        </a>
     </div>
 
     <div class="post-content">

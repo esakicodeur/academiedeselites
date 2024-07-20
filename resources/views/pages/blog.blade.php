@@ -17,7 +17,7 @@
         </div>
 
         <div class="row">
-            <div class="col-md-4 col-sm-3">
+            <div class="col-md-4 col-sm-12 col-xs-12">
                 <div class="bg-light p-5 mb-5">
                     <h2>Catégories</h2>
                     <ul class="list-group">
@@ -28,7 +28,7 @@
                 </div>
             </div>
 
-            <div class="col-md-8 col-sm-9">
+            <div class="col-md-8 col-sm-12 col-xs-12">
                 <div class="posts">
                     @forelse ($posts as $post)
                         @include('post.card')

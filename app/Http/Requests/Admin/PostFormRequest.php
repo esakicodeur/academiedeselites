@@ -27,7 +27,8 @@ class PostFormRequest extends FormRequest
             'title' => ['required', 'min:8'],
             'description' => ['required', 'min:8'],
             'category_id' => ['required', 'exists:categories,id'],
-            'tags' => ['array', 'exists:tags,id','required']
+            'tags' => ['array', 'exists:tags,id','required'],
+            'image' => ['image', 'max:2000']
         ];
     }
 }

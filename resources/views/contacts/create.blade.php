@@ -57,7 +57,7 @@
             <p class="text-muted">Si vous rencontrez des problèmes avec ce service, s'il vous plait <a href="mailto:academiedeselites237@gmail.com">veuillez
                 demander de l'aide</a></p>
 
-            <form action="{{ route('contact.store') }}" method="POST">
+            <form action="{{ route('contact.store') }}" method="POST" class="bg-light py-5 px-5 mb-5">
                 @csrf
 
                 <p>

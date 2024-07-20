@@ -6,7 +6,7 @@
 
     <h1>@yield('title')</h1>
 
-    <form action="{{ route($tag->exists ? 'admin.tag.update' : 'admin.tag.store', $tag) }}" method="POST">
+    <form action="{{ route($tag->exists ? 'admin.tag.update' : 'admin.tag.store', $tag) }}" method="POST" class="bg-light py-5 px-5">
 
         @csrf
         @method($tag->exists ? 'put' : 'post')

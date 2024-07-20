@@ -32,6 +32,8 @@
                 <x-hero-section-blog />
             @elseif (Route::is('by-category'))
                 <x-hero-section-blog />
+            @elseif (Route::is('by-tag'))
+                <x-hero-section-blog />
             @endif
         </div>
     </header>

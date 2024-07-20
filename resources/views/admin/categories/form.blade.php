@@ -6,7 +6,7 @@
 
     <h1>@yield('title')</h1>
 
-    <form action="{{ route($category->exists ? 'admin.category.update' : 'admin.category.store', $category) }}" method="POST">
+    <form action="{{ route($category->exists ? 'admin.category.update' : 'admin.category.store', $category) }}" method="POST" class="bg-light py-5 px-5">
 
         @csrf
         @method($category->exists ? 'put' : 'post')

@@ -8,6 +8,7 @@ use App\Models\Category;
 use App\Models\Post;
 use App\Models\Tag;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class PostsController extends Controller
 {
@@ -45,7 +46,7 @@ class PostsController extends Controller
      */
     public function store(PostFormRequest $request)
     {
-        $post = Post::create($request->validated());
+        $post = Post::create($this->extractData(new Post(), $request));
         $post->tags()->sync($request->validated('tags'));
 
         return to_route('admin.post.index')->with('success', 'L\'article a bien été créé.');
@@ -75,10 +76,30 @@ class PostsController extends Controller
      */
     public function update(PostFormRequest $request, Post $post)
     {
-        $post->update($request->validated());
+        $post->update($this->extractData($post, $request));
+
         $post->tags()->sync($request->validated('tags'));
 
         return to_route('admin.post.index')->with('success', 'L\'article a bien été modifié.');
+    }
+
+    private function extractData(Post $post, PostFormRequest $request): array
+    {
+        $data = $request->validated();
+
+        /** @var \Illuminate\Http\UploadedFile|null $image */
+        $image = $request->validated('image');
+
+        if ($image === null || $image->getError()) {
+            return $data;
+        }
+        if ($post->image) {
+            Storage::disk('public')->delete($post->image);
+        }
+
+        $data['image'] = $image->store('blog', 'public');
+
+        return $data;
     }
 
     /**
