@@ -5,7 +5,7 @@
     <div class="form-box">
         <div class="progression">
             <div class="logo">
-                <a href="{{ route('home') }}"><img src="images/logo-sm.png" alt="logo"></a>
+                <a href="{{ route('home') }}"><img src="{{ asset('images/logo-sm.png') }}" alt="logo"></a>
             </div>
             <ul class="progression-steps">
                 <li class="step active">

@@ -39,6 +39,18 @@
                 <a href="{{ route('admin.teacher.index') }}" @class(['nav-link', 'active' => str_contains($route, 'teacher.')])>Enseignants</a>
               </li>
             </ul>
+
+            <div class="navbar-nav ms-auto mb-2 mb-lg-0">
+                @auth
+                    <span class="nav-item mx-4 text-success fw-bold">{{ auth()->user()->name }}</span>
+                    <form class="nav-item" action="{{ route('logout') }}" method="POST">
+                        @csrf
+                        <button type="submit" class="btn btn-outline-warning btn-sm">
+                            Se déconnecter
+                        </button>
+                    </form>
+                @endauth
+            </div>
           </div>
         </div>
       </nav>

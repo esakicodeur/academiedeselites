@@ -39,9 +39,20 @@
             <div class="box">
                 <h4>Resources</h4>
                 <ul>
-                    <li><a href="#">News</a></li>
-                    <li><a href="#">Research</a></li>
-                    <li><a href="#">Recent Projects</a></li>
+                    @auth
+                        <li class="text-success">Salut {{ auth()->user()->name }} !</li>
+                        <li>
+                            <form action="{{ route('logout') }}" method="POST">
+                                @csrf
+                                <button type="submit" class="btn btn-outline-warning btn-sm">
+                                    Se déconnecter
+                                </button>
+                            </form>
+                        </li>
+                    @else
+                        <li><a href="{{ route('register') }}">Créer un compte</a></li>
+                        <li><a href="{{ route('login') }}">Se connecter</a></li>
+                    @endauth
                 </ul>
             </div>
             <div class="box">
