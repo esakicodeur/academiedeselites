@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 
 class Student extends Model
 {
@@ -46,4 +47,9 @@ class Student extends Model
         'etablissement_actuel',
         'accepte',
     ];
+
+    public function getSlug(): string
+    {
+        return Str::slug($this->nom);
+    }
 }

@@ -27,10 +27,16 @@
                 <a href="{{ route('admin.post.index') }}" @class(['nav-link', 'active' => str_contains($route, 'post.')])>Articles</a>
               </li>
               <li class="nav-item">
-                <a href="{{ route('admin.category.index') }}" @class(['nav-link', 'active' => str_contains($route, 'category.')])>categories</a>
+                <a href="{{ route('admin.category.index') }}" @class(['nav-link', 'active' => str_contains($route, 'category.')])>Catégories</a>
               </li>
               <li class="nav-item">
                 <a href="{{ route('admin.tag.index') }}" @class(['nav-link', 'active' => str_contains($route, 'tag.')])>Tags</a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route('admin.student.index') }}" @class(['nav-link', 'active' => str_contains($route, 'student.')])>Elèves</a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route('admin.teacher.index') }}" @class(['nav-link', 'active' => str_contains($route, 'teacher.')])>Enseignants</a>
               </li>
             </ul>
           </div>

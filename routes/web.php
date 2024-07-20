@@ -43,4 +43,16 @@ Route::prefix('admin')->name('admin.')->group(function () {
         'contact' => '[0-9]+',
         'slug' => '[0-9a-z\-]+'
     ]);
+
+    Route::get('/student', [StudentsController::class, 'index'])->name('student.index');
+    Route::get('/student/{slug}-{student}', [StudentsController::class, 'show'])->name('student.show')->where([
+        'student' => '[0-9]+',
+        'slug' => '[0-9a-z\-]+'
+    ]);
+
+    Route::get('/teacher', [TeachersController::class, 'index'])->name('teacher.index');
+    Route::get('/teacher/{slug}-{teacher}', [TeachersController::class, 'show'])->name('teacher.show')->where([
+        'teacher' => '[0-9]+',
+        'slug' => '[0-9a-z\-]+'
+    ]);
 });

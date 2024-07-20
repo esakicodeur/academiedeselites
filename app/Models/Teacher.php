@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 
 class Teacher extends Model
 {
@@ -54,4 +55,9 @@ class Teacher extends Model
         'histoire_geo_ecm',
         'phylosophie',
     ];
+
+    public function getSlug(): string
+    {
+        return Str::slug($this->nom);
+    }
 }
