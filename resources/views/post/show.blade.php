@@ -9,10 +9,19 @@
 
         <h1>{{ $post->title }}</h1>
 
-        @foreach ($post->tags as $tag)
-            <span class="badge bg-primary">{{ $tag->name }}</span>
-        @endforeach
-
+        <p class="small">
+            @if ($post->category)
+                Catégorie : <span class="badge bg-primary">{{ $post->category?->name }}</span>
+            @endif
+        </p>
+        <p class="small">
+            @if (!$post->tags->isEmpty())
+                Tags :
+                @foreach ($post->tags as $tag)
+                    <span class="badge bg-secondary">{{ $tag->name }}</span>
+                @endforeach
+            @endif
+        </p>
         <p>
             {!! nl2br($post->description) !!}
         </p>

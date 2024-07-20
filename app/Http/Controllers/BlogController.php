@@ -3,20 +3,22 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\SearchPostsRequest;
+use App\Models\Category;
 use App\Models\Post;
 use Illuminate\Http\Request;
 
 class BlogController extends Controller
 {
     public function index(SearchPostsRequest $request) {
-        $query = Post::query();
+        $query = Post::with('tags', 'category')->orderBy('created_at', 'desc');
         if ($request->has('title')) {
             $query = $query->where('title', 'like', "%{$request->input('title')}%");
         }
 
         return view('pages.blog', [
-            'posts' => $query->paginate(6),
-            'input' => $request->validated()
+            'posts' => $query->paginate(4),
+            'input' => $request->validated(),
+            'categories' => Category::select('id', 'name')->get(),
         ]);
     }
 
@@ -29,6 +31,20 @@ class BlogController extends Controller
 
         return view('post.show', [
             'post' => $post
+        ]);
+    }
+
+    public function byCategory(string $slug, Category $category) {
+        $query = Post::where('posts.category_id', '=', $category->id)->orderBy('created_at', 'desc');
+        $expectedSlug = $category->getSlug();
+
+        if ($slug !== $expectedSlug) {
+            return to_route('blog.show', ['slug' => $expectedSlug, 'category' => $category]);
+        }
+
+        return view('pages.blog', [
+            'posts' => $query->paginate(4),
+            'categories' => Category::select('id', 'name')->get()
         ]);
     }
 

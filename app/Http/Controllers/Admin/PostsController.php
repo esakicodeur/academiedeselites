@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\PostFormRequest;
+use App\Models\Category;
 use App\Models\Post;
 use App\Models\Tag;
 use Illuminate\Http\Request;
@@ -31,6 +32,7 @@ class PostsController extends Controller
     {
         return view('admin.posts.form', [
             'post' => new Post(),
+            'categories' => Category::select('id', 'name')->get(),
             'tags' => Tag::pluck('name', 'id'),
         ]);
     }
@@ -59,6 +61,7 @@ class PostsController extends Controller
     {
         return view('admin.posts.form', [
             'post' => $post,
+            'categories' => Category::select('id', 'name')->get(),
             'tags' => Tag::pluck('name', 'id'),
         ]);
     }

@@ -22,6 +22,10 @@ Route::get('/blog/{slug}-{post}', [BlogController::class, 'show'])->name('blog.s
     'post' => $idRegex,
     'slug' => $slugRegex
 ]);
+Route::get('/category/{slug}-{category}', [BlogController::class, 'byCategory'])->name('by-category')->where([
+    'slug' => $slugRegex,
+    'category' => $idRegex,
+]);
 
 Route::get('/contact', [ContactsController::class, 'create'])->name('contact.create');
 Route::post('/contact', [ContactsController::class, 'store'])->name('contact.store');

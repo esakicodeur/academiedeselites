@@ -16,16 +16,30 @@
             </form>
         </div>
 
-        <div class="posts">
-            @forelse ($posts as $post)
-                @include('post.card')
-            @empty
-                <h2 class="bg-light p-5 mb-5 text-center">
-                    Aucun article ne correspond à cette recherche.
-                </h2>
-            @endforelse
+        <div class="row">
+            <div class="col-md-4 col-sm-3">
+                <div class="bg-light p-5 mb-5">
+                    <ul class="list-group">
+                        @foreach ($categories as $category)
+                            <a href="{{ route('by-category', ['slug' => $category->getSlug(), 'category' => $category]) }}" class="text-decoration-none fw-bold"><li class="list-group-item">{{ $category->name }}</li></a>
+                        @endforeach
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-8 col-sm-9">
+                <div class="posts">
+                    @forelse ($posts as $post)
+                        @include('post.card')
+                    @empty
+                        <h2 class="bg-light p-5 mb-5 text-center">
+                            Aucun article ne correspond à cette recherche.
+                        </h2>
+                    @endforelse
+                </div>
+                {{ $posts->links() }}
+            </div>
         </div>
-        {{ $posts->links() }}
     </div>
 </div>
 
