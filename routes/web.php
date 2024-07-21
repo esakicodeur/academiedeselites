@@ -76,9 +76,17 @@ Route::prefix('admin')->name('admin.')->middleware(['auth', 'role:admin'])->grou
         'student' => '[0-9]+',
         'slug' => '[0-9a-z\-]+'
     ]);
+    Route::get('/pdf-student/{slug}-{student}', [StudentsController::class, 'pdf'])->name('student.pdf')->where([
+        'student' => '[0-9]+',
+        'slug' => '[0-9a-z\-]+'
+    ]);
 
     Route::get('/teacher', [TeachersController::class, 'index'])->name('teacher.index');
     Route::get('/teacher/{slug}-{teacher}', [TeachersController::class, 'show'])->name('teacher.show')->where([
+        'teacher' => '[0-9]+',
+        'slug' => '[0-9a-z\-]+'
+    ]);
+    Route::get('/pdf-teacher/{slug}-{teacher}', [TeachersController::class, 'pdf'])->name('teacher.pdf')->where([
         'teacher' => '[0-9]+',
         'slug' => '[0-9a-z\-]+'
     ]);

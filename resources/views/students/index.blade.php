@@ -29,6 +29,7 @@
                     <td>
                         <div class="d-flex gap-2 w-100 justify-content-end">
                             <a href="{{ route('admin.student.show', ['slug' => $student->getSlug(), 'student' => $student]) }}" class="btn btn-primary">Voir</a>
+                            <a href="{{ route('admin.student.pdf', ['slug' => $student->getSlug(), 'student' => $student]) }}" class="btn btn-primary">PDF</a>
                         </div>
                     </td>
                 </tr>

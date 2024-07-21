@@ -7,6 +7,7 @@ use App\Models\Jour;
 use App\Models\Matiere;
 use App\Models\Niveau;
 use App\Models\Teacher;
+use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Http\Request;
 
 class TeachersController extends Controller
@@ -22,12 +23,24 @@ class TeachersController extends Controller
         $expectedSlug = $teacher->getSlug();
 
         if ($slug !== $expectedSlug) {
-            return to_route('teachers.show', ['slug' => $expectedSlug, 'teacher' => $teacher]);
+            return to_route('teacher.show', ['slug' => $expectedSlug, 'teacher' => $teacher]);
         }
 
         return view('teachers.show', [
             'teacher' => $teacher
         ]);
+    }
+
+    public function pdf(string $slug, Teacher $teacher) {
+        $expectedSlug = $teacher->getSlug();
+
+        if ($slug !== $expectedSlug) {
+            return to_route('teacher.pdf', ['slug' => $expectedSlug, 'teacher' => $teacher]);
+        }
+
+        return Pdf::loadView('teachers.pdf', [
+            'teacher' => $teacher
+        ])->download('teacher.pdf');
     }
 
     public function create() {

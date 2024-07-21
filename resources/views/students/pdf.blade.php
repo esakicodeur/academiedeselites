@@ -1,6 +1,6 @@
-@extends('admin.admin')
+@extends('pdfbase')
 
-@section('title', $student->nom)
+{{-- @section('title', $student->nom) --}}
 
 @section('content')
     <div class="card">

@@ -7,6 +7,7 @@ use App\Models\Information;
 use App\Models\Jour;
 use App\Models\Matiere;
 use App\Models\Student;
+use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Http\Request;
 
 class StudentsController extends Controller
@@ -22,12 +23,24 @@ class StudentsController extends Controller
         $expectedSlug = $student->getSlug();
 
         if ($slug !== $expectedSlug) {
-            return to_route('students.show', ['slug' => $expectedSlug, 'contact' => $student]);
+            return to_route('student.show', ['slug' => $expectedSlug, 'student' => $student]);
         }
 
         return view('students.show', [
             'student' => $student
         ]);
+    }
+
+    public function pdf(string $slug, Student $student) {
+        $expectedSlug = $student->getSlug();
+
+        if ($slug !== $expectedSlug) {
+            return to_route('student.pdf', ['slug' => $expectedSlug, 'student' => $student]);
+        }
+
+        return Pdf::loadView('students.pdf', [
+            'student' => $student
+        ])->download('student.pdf');
     }
 
     public function create() {
