@@ -34,6 +34,8 @@
                 <x-hero-section-blog />
             @elseif (Route::is('by-tag'))
                 <x-hero-section-blog />
+            @elseif (Route::is('policy'))
+                <x-hero-section-policy />
             @endif
         </div>
     </header>

@@ -40,7 +40,7 @@
                     <li><a href="{{ route('services') }}">Services</a></li>
                     <li><a href="{{ route('blog.index') }}">Blog</a></li>
                     <li><a href="{{ route('contact.create') }}">Contact</a></li>
-                    <li><a href="policy.html">Politique de confidentialité</a></li>
+                    <li><a href="{{ route('policy') }}">Politique de confidentialité</a></li>
                 </ul>
             </div>
             <div class="box">

@@ -24,6 +24,7 @@ $slugRegex = '[0-9a-z\-]+';
 Route::get('/', [PagesController::class, 'home'])->name('home');
 Route::get('/about', [PagesController::class, 'about'])->name('about');
 Route::get('/services', [PagesController::class, 'services'])->name('services');
+Route::get('/policy', [PagesController::class, 'policy'])->name('policy');
 
 // Blog routes
 Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');

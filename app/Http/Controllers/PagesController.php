@@ -20,6 +20,10 @@ class PagesController extends Controller
         return view('pages.services');
     }
 
+    public function policy() {
+        return view('pages.policy');
+    }
+
     public function admin() {
         return view('pages.admin', [
             'messages' => Contact::orderBy('created_at', 'desc')->paginate(25),
