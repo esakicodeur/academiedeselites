@@ -10,29 +10,36 @@
                     <p class="text-sm">
                         Abonnez-vous maintenant pour recevoir des conseils sur la façon de faire passer votre entreprise au niveau supérieur.
                     </p>
-                    <form>
-                        <input type="email" id="email" placeholder="Entrer votre Email">
+
+                    <form action="{{ route('newsletter.store') }}" method="POST">
+                        @csrf
+
+                        <p>
+                            <input type="email" name="email" id="email" class="form-control {{ $errors->has('email') ? 'is-invalid' : '' }}" value="{{ old('email') }}" placeholder="Votre adresse email..." >
+                            {!! $errors->first('email', '<span class="invalid-feedback">:message</span>') !!}
+                        </p>
+
                         <button type="submit" class="bouton bouton-primary bouton-block">S'abonner</button>
                     </form>
                 </div>
 
                 <h4>Nos réseaux sociaux</h4>
                 <div class="social-medias">
-                    <img src="images/facebook.png" alt="">
-                    <img src="images/twitter.png" alt="">
-                    <img src="images/linkedin.png" alt="">
-                    <img src="images/instagram.png" alt="">
-                    <img src="images/youtube.png" alt="">
+                    <a href="about.html"><img src="{{ asset('images/facebook.png') }}" alt=""></a>
+                    <a href="about.html"><img src="{{ asset('images/twitter.png') }}" alt=""></a>
+                    <a href="about.html"><img src="{{ asset('images/linkedin.png') }}" alt=""></a>
+                    <a href="about.html"><img src="{{ asset('images/instagram.png') }}" alt=""></a>
+                    <a href="about.html"><img src="{{ asset('images/youtube.png') }}" alt=""></a>
                 </div>
 
             </div>
             <div class="box">
                 <h4>Liens utiles</h4>
                 <ul>
-                    <li><a href="about.html">A propos</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="{{ route('about') }}">A propos</a></li>
+                    <li><a href="{{ route('services') }}">Services</a></li>
+                    <li><a href="{{ route('blog.index') }}">Blog</a></li>
+                    <li><a href="{{ route('contact.create') }}">Contact</a></li>
                     <li><a href="policy.html">Politique de confidentialité</a></li>
                 </ul>
             </div>

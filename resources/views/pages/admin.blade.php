@@ -70,7 +70,7 @@
                 </div>
 
                 <div>
-                    <h2 class="my-5">Messages reçus</h2>
+                    <h2 class="my-3">Messages reçus</h2>
                     <table class="table table-striped">
                         <thead>
                             <tr>
@@ -102,6 +102,28 @@
 
                     <div class="paginate">
                         {{ $messages->links() }}
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="my-3">Newsletters</h2>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Emails</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach ($newsletters as $newsletter)
+                                <tr>
+                                    <td>{{ $newsletter->email }}</td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+
+                    <div class="paginate">
+                        {{ $newsletters->links() }}
                     </div>
                 </div>
             </div>

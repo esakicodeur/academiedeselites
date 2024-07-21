@@ -10,6 +10,7 @@ use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\Admin\TagsController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ContactsController;
+use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\StudentsController;
 use App\Http\Controllers\TeachersController;
@@ -42,6 +43,10 @@ Route::get('/tag/{slug}-{tag}', [BlogController::class, 'byTag'])->name('by-tag'
 // Contact routes
 Route::get('/contact', [ContactsController::class, 'create'])->name('contact.create');
 Route::post('/contact', [ContactsController::class, 'store'])->name('contact.store');
+
+// Newsletter routes
+Route::get('/newsletter', [NewsletterController::class, 'create'])->name('newsletter.create');
+Route::post('/newsletter', [NewsletterController::class, 'store'])->name('newsletter.store');
 
 // Student routes
 Route::get('/student', [StudentsController::class, 'create'])->name('student.create');
