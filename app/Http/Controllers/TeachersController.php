@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\TeacherFormRequest;
+use App\Models\Jour;
+use App\Models\Matiere;
+use App\Models\Niveau;
 use App\Models\Teacher;
 use Illuminate\Http\Request;
 
@@ -11,7 +14,7 @@ class TeachersController extends Controller
     public function index()
     {
         return view('teachers.index', [
-            'teachers' => Teacher::orderBy('created_at', 'desc')->paginate(2)
+            'teachers' => Teacher::orderBy('created_at', 'desc')->paginate(25)
         ]);
     }
 
@@ -28,11 +31,19 @@ class TeachersController extends Controller
     }
 
     public function create() {
-        return view('teachers.create');
+        return view('teachers.create', [
+            'jours' => Jour::all(),
+            'matieres' => Matiere::all(),
+            'niveaux' => Niveau::all(),
+        ]);
     }
 
     public function store(TeacherFormRequest $request) {
         $teacher = Teacher::create($request->validated());
+
+        $teacher->jours()->attach($request->validated('jours'));
+        $teacher->matieres()->attach($request->validated('matieres'));
+        $teacher->niveaux()->attach($request->validated('niveaux'));
 
         flashy()->success('Nous vous répondrons dans les plus brefs délais !');
 

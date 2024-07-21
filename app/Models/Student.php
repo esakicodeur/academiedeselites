@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Support\Str;
 
 class Student extends Model
@@ -11,30 +12,8 @@ class Student extends Model
     use HasFactory;
 
     protected $fillable = [
-        'recommandation',
-        'publicite',
-        'reseaux',
-        'internet',
         'autre',
-        'lundi',
-        'mardi',
-        'mercredi',
-        'jeudi',
-        'vendredi',
-        'samedi',
-        'dimanche',
         'objectifs',
-        'mathematiques',
-        'physiques',
-        'chimie',
-        'svt',
-        'francais',
-        'anglais',
-        'allemand',
-        'espagnol',
-        'informatique',
-        'histoire_geo_ecm',
-        'phylosophie',
         'nom',
         'prenom',
         'email',
@@ -47,6 +26,21 @@ class Student extends Model
         'etablissement_actuel',
         'accepte',
     ];
+
+    public function informations(): BelongsToMany
+    {
+        return $this->belongsToMany(Information::class);
+    }
+
+    public function jours(): BelongsToMany
+    {
+        return $this->belongsToMany(Jour::class);
+    }
+
+    public function matieres(): BelongsToMany
+    {
+        return $this->belongsToMany(Matiere::class);
+    }
 
     public function getSlug(): string
     {

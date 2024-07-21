@@ -1,6 +1,10 @@
 <?php
 
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\InformationController;
+use App\Http\Controllers\Admin\JourController;
+use App\Http\Controllers\Admin\MatiereController;
+use App\Http\Controllers\Admin\NiveauController;
 use App\Http\Controllers\Admin\PostsController;
 use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\Admin\TagsController;
@@ -57,6 +61,10 @@ Route::prefix('admin')->name('admin.')->middleware(['auth', 'role:admin'])->grou
     Route::resource('tag', TagsController::class)->except(['show']);
     Route::resource('category', CategoryController::class)->except(['show']);
     Route::resource('role', RoleController::class)->except(['show']);
+    Route::resource('information', InformationController::class)->except(['show']);
+    Route::resource('jour', JourController::class)->except(['show']);
+    Route::resource('matiere', MatiereController::class)->except(['show']);
+    Route::resource('niveau', NiveauController::class)->except(['show']);
 
     Route::get('/contact/{slug}-{contact}', [ContactsController::class, 'show'])->name('contact.show')->where([
         'contact' => '[0-9]+',

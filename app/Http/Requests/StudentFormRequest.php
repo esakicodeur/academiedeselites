@@ -24,6 +24,7 @@ class StudentFormRequest extends FormRequest
     public function rules()
     {
         return [
+            'autre' => 'nullable',
             'objectifs' => 'required|min:10',
             'nom' => 'required|min:3',
             'prenom' => 'required|min:3',
@@ -36,6 +37,9 @@ class StudentFormRequest extends FormRequest
             'niveau' => 'required|min:3',
             'etablissement_actuel' => 'required|min:3',
             'accepte' => ['accepted', 'boolean'],
+            'information' => ['array', 'exists:information,id'],
+            'jours' => ['array', 'exists:jours,id'],
+            'matieres' => ['array', 'exists:matieres,id']
         ];
     }
 }

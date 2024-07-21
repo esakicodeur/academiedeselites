@@ -219,80 +219,21 @@
                 <h2>Compétences</h2>
                 <p>Matières que vous êtes capable d'enseigner :</p>
                 <div class="checkbox">
-                    <div class="form-check form-switch">
-                        <input type="hidden" name="mathematiques">
-                        <input type="checkbox" name="mathematiques" value="{{ old('mathematiques') }}" class="form-check-input" role="switch" id="mathematiques">
-                        <label class="form-check-label" for="form-label">Mathématiques</label>
-                    </div>
-                    <div class="form-check form-switch">
-                        <input type="hidden" name="physiques">
-                        <input type="checkbox" name="physiques" value="{{ old('physiques') }}" class="form-check-input" role="switch" id="physiques">
-                        <label class="form-check-label" for="form-label">Physiques</label>
-                    </div>
-                    <div class="form-check form-switch">
-                        <input type="hidden" name="chimie">
-                        <input type="checkbox" name="chimie" value="{{ old('chimie') }}" class="form-check-input" role="switch" id="chimie">
-                        <label class="form-check-label" for="form-label">Chimie</label>
-                    </div>
-                    <div class="form-check form-switch">
-                        <input type="hidden" name="svt">
-                        <input type="checkbox" name="svt" value="{{ old('svt') }}" class="form-check-input" role="switch" id="svt">
-                        <label class="form-check-label" for="form-label">SVT</label>
-                    </div>
-                    <div class="form-check form-switch">
-                        <input type="hidden" name="francais">
-                        <input type="checkbox" name="francais" value="{{ old('francais') }}" class="form-check-input" role="switch" id="francais">
-                        <label class="form-check-label" for="form-label">Français</label>
-                    </div>
-                    <div class="form-check form-switch">
-                        <input type="hidden" name="anglais">
-                        <input type="checkbox" name="anglais" value="{{ old('anglais') }}" class="form-check-input" role="switch" id="anglais">
-                        <label class="form-check-label" for="form-label">Anglais</label>
-                    </div>
-                    <div class="form-check form-switch">
-                        <input type="hidden" name="allemand">
-                        <input type="checkbox" name="allemand" value="{{ old('allemand') }}" class="form-check-input" role="switch" id="allemand">
-                        <label class="form-check-label" for="form-label">Allemand</label>
-                    </div>
-                    <div class="form-check form-switch">
-                        <input type="hidden" name="espagnol">
-                        <input type="checkbox" name="espagnol" value="{{ old('espagnol') }}" class="form-check-input" role="switch" id="espagnol">
-                        <label class="form-check-label" for="form-label">Espagnol</label>
-                    </div>
-                    <div class="form-check form-switch">
-                        <input type="hidden" name="informatique">
-                        <input type="checkbox" name="informatique" value="{{ old('informatique') }}" class="form-check-input" role="switch" id="informatique">
-                        <label class="form-check-label" for="form-label">Informatique</label>
-                    </div>
-                    <div class="form-check form-switch">
-                        <input type="hidden" name="histoire_geo_ecm">
-                        <input type="checkbox" name="histoire_geo_ecm" value="{{ old('histoire_geo_ecm') }}" class="form-check-input" role="switch" id="histoire_geo_ecm">
-                        <label class="form-check-label" for="form-label">Histoire/Géographie/ECM</label>
-                    </div>
-                    <div class="form-check form-switch">
-                        <input type="hidden" name="phylosophie">
-                        <input type="checkbox" name="phylosophie" value="{{ old('phylosophie') }}" class="form-check-input" role="switch" id="phylosophie">
-                        <label class="form-check-label" for="form-label">Phylosophie</label>
-                    </div>
+                    @foreach ($matieres as $matiere)
+                        <p class="form-check form-switch">
+                            <input type="checkbox" name="matieres[]" value="{{ $matiere->id }}" class="form-check-input" role="switch" id="{{ $matiere->id }}">
+                            <label class="form-check-label" for="{{ $matiere->id }}">{{ $matiere->name }}</label>
+                        </p>
+                    @endforeach
                 </div>
-
                 <p>Niveaux scolaires que vous pouvez enseigner :</p>
                 <div class="checkbox">
-                    <div class="form-check form-switch">
-                        <input type="hidden" name="primaire">
-                        <input type="checkbox" name="primaire" value="{{ old('primaire') }}" class="form-check-input" role="switch" id="primaire">
-                        <label class="form-check-label" for="form-label">Primaire</label>
-                    </div>
-                    <div class="form-check form-switch">
-                        <input type="hidden" name="secondaire">
-                        <input type="checkbox" name="secondaire" value="{{ old('secondaire') }}" class="form-check-input" role="switch" id="secondaire">
-                        <label class="form-check-label" for="form-label">Secondaire</label>
-                    </div>
-                    <div class="form-check form-switch">
-                        <input type="hidden" name="universitaire">
-                        <input type="checkbox" name="universitaire" value="{{ old('universitaire') }}" class="form-check-input" role="switch" id="universitaire">
-                        <label class="form-check-label" for="form-label">Universitaire</label>
-                    </div>
+                    @foreach ($niveaux as $niveau)
+                        <p class="form-check form-switch">
+                            <input type="checkbox" name="niveaux[]" value="{{ $niveau->id }}" class="form-check-input" role="switch" id="{{ $niveau->id }}">
+                            <label class="form-check-label" for="{{ $niveau->id }}">{{ $niveau->name }}</label>
+                        </p>
+                    @endforeach
                 </div>
             </div>
 
@@ -301,41 +242,12 @@
                 <h2>Disponibilité : *</h2>
                 <p>Jour de la semaine disponibles.</p>
                 <div class="checkbox">
-                    <div class="form-check form-switch">
-                        <input type="hidden" name="lundi">
-                        <input type="checkbox" name="lundi" value="{{ old('lundi') }}" class="form-check-input" role="switch" id="lundi">
-                        <label class="form-check-label" for="form-label">Lundi</label>
-                    </div>
-                    <div class="form-check form-switch">
-                        <input type="hidden" name="mardi">
-                        <input type="checkbox" name="mardi" value="{{ old('mardi') }}" class="form-check-input" role="switch" id="mardi">
-                        <label class="form-check-label" for="form-label">Mardi</label>
-                    </div>
-                    <div class="form-check form-switch">
-                        <input type="hidden" name="mercredi">
-                        <input type="checkbox" name="mercredi" value="{{ old('mercredi') }}" class="form-check-input" role="switch" id="mercredi">
-                        <label class="form-check-label" for="form-label">Mercredi</label>
-                    </div>
-                    <div class="form-check form-switch">
-                        <input type="hidden" name="jeudi">
-                        <input type="checkbox" name="jeudi" value="{{ old('jeudi') }}" class="form-check-input" role="switch" id="jeudi">
-                        <label class="form-check-label" for="form-label">Jeudi</label>
-                    </div>
-                    <div class="form-check form-switch">
-                        <input type="hidden" name="vendredi">
-                        <input type="checkbox" name="vendredi" value="{{ old('vendredi') }}" class="form-check-input" role="switch" id="vendredi">
-                        <label class="form-check-label" for="form-label">Vendredi</label>
-                    </div>
-                    <div class="form-check form-switch">
-                        <input type="hidden" name="samedi">
-                        <input type="checkbox" name="samedi" value="{{ old('samedi') }}" class="form-check-input" role="switch" id="samedi">
-                        <label class="form-check-label" for="form-label">Samedi</label>
-                    </div>
-                    <div class="form-check form-switch">
-                        <input type="hidden" name="dimanche">
-                        <input type="checkbox" name="dimanche" value="{{ old('dimanche') }}" class="form-check-input" role="switch" id="dimanche">
-                        <label class="form-check-label" for="form-label">Dimanche</label>
-                    </div>
+                    @foreach ($jours as $jour)
+                        <p class="form-check form-switch">
+                            <input type="checkbox" name="jours[]" value="{{ $jour->id }}" class="form-check-input" role="switch" id="{{ $jour->id }}">
+                            <label class="form-check-label" for="{{ $jour->id }}">{{ $jour->name }}</label>
+                        </p>
+                    @endforeach
                 </div>
                 <div>
                     <label for="plages">Plages horaires disponibles :</label>

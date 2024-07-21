@@ -31,6 +31,18 @@
                         <li class="list-group-item">
                             <a class="text-decoration-none text-dark fw-bold" href="{{ route('admin.role.index') }}">Roles</a>
                         </li>
+                        <li class="list-group-item">
+                            <a class="text-decoration-none text-dark fw-bold" href="{{ route('admin.information.index') }}">Informations</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a class="text-decoration-none text-dark fw-bold" href="{{ route('admin.jour.index') }}">Jours</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a class="text-decoration-none text-dark fw-bold" href="{{ route('admin.matiere.index') }}">Matieres</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a class="text-decoration-none text-dark fw-bold" href="{{ route('admin.niveau.index') }}">Niveaux</a>
+                        </li>
                     </ul>
                 </div>
             </div>

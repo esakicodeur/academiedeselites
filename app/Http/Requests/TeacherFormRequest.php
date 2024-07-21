@@ -45,6 +45,9 @@ class TeacherFormRequest extends FormRequest
             'plages' => 'required|min:3',
             'methodologie' => 'required|min:10',
             'motivation' => 'required|min:10',
+            'jours' => ['array', 'exists:jours,id'],
+            'matieres' => ['array', 'exists:matieres,id'],
+            'niveaux' => ['array', 'exists:niveaux,id']
         ];
     }
 }

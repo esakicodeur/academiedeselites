@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Support\Str;
 
 class Teacher extends Model
@@ -29,32 +30,25 @@ class Teacher extends Model
         'niveau',
         'specialisation',
         'certifications',
-        'Primaire',
-        'Secondaire',
-        'Universitaire',
         'plages',
         'methodologie',
         'motivation',
-        'lundi',
-        'mardi',
-        'mercredi',
-        'jeudi',
-        'vendredi',
-        'samedi',
-        'dimanche',
-        'objectifs',
-        'mathematiques',
-        'physiques',
-        'chimie',
-        'svt',
-        'francais',
-        'anglais',
-        'allemand',
-        'espagnol',
-        'informatique',
-        'histoire_geo_ecm',
-        'phylosophie',
     ];
+
+    public function jours(): BelongsToMany
+    {
+        return $this->belongsToMany(Jour::class);
+    }
+
+    public function matieres(): BelongsToMany
+    {
+        return $this->belongsToMany(Matiere::class);
+    }
+
+    public function niveaux(): BelongsToMany
+    {
+        return $this->belongsToMany(Niveau::class);
+    }
 
     public function getSlug(): string
     {

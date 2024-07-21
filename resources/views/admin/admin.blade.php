@@ -44,6 +44,18 @@
               <li class="nav-item">
                 <a href="{{ route('admin.role.index') }}" @class(['nav-link', 'active' => str_contains($route, 'role.')])>Roles</a>
               </li>
+              <li class="nav-item">
+                <a href="{{ route('admin.information.index') }}" @class(['nav-link', 'active' => str_contains($route, 'information.')])>Informations</a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route('admin.jour.index') }}" @class(['nav-link', 'active' => str_contains($route, 'jour.')])>Jours</a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route('admin.matiere.index') }}" @class(['nav-link', 'active' => str_contains($route, 'matiere.')])>Matieres</a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route('admin.niveau.index') }}" @class(['nav-link', 'active' => str_contains($route, 'niveau.')])>Niveaux</a>
+              </li>
             </ul>
 
             <div class="navbar-nav ms-auto mb-2 mb-lg-0">

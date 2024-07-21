@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StudentFormRequest;
+use App\Models\Information;
+use App\Models\Jour;
+use App\Models\Matiere;
 use App\Models\Student;
 use Illuminate\Http\Request;
 
@@ -11,7 +14,7 @@ class StudentsController extends Controller
     public function index()
     {
         return view('students.index', [
-            'students' => Student::orderBy('created_at', 'desc')->paginate(2)
+            'students' => Student::orderBy('created_at', 'desc')->paginate(25)
         ]);
     }
 
@@ -28,11 +31,19 @@ class StudentsController extends Controller
     }
 
     public function create() {
-        return view('students.create');
+        return view('students.create', [
+            'informations' => Information::all(),
+            'jours' => Jour::all(),
+            'matieres' => Matiere::all(),
+        ]);
     }
 
-    public function store(StudentFormRequest $request) {
+    public function store(StudentFormRequest $request, Student $student) {
         $student = Student::create($request->validated());
+
+        $student->informations()->attach($request->validated('information'));
+        $student->jours()->attach($request->validated('jours'));
+        $student->matieres()->attach($request->validated('matieres'));
 
         flashy()->success('Nous vous répondrons dans les plus brefs délais !');
 
