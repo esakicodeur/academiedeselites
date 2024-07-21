@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\PostsController;
+use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\Admin\TagsController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ContactsController;
@@ -47,12 +48,15 @@ Route::get('/teacher', [TeachersController::class, 'create'])->name('teacher.cre
 Route::post('/teacher', [TeachersController::class, 'store'])->name('teacher.store');
 
 // Admin routes
-Route::prefix('admin')->name('admin.')->middleware('auth')->group(function () {
+Route::prefix('admin')->name('admin.')->middleware(['auth', 'role:admin'])->group(function () {
     Route::get('/', [PagesController::class, 'admin'])->name('admin');
+
+    Route::resource('user', \App\Http\Controllers\Admin\UserController::class)->except(['show']);
 
     Route::resource('post', PostsController::class)->except(['show']);
     Route::resource('tag', TagsController::class)->except(['show']);
     Route::resource('category', CategoryController::class)->except(['show']);
+    Route::resource('role', RoleController::class)->except(['show']);
 
     Route::get('/contact/{slug}-{contact}', [ContactsController::class, 'show'])->name('contact.show')->where([
         'contact' => '[0-9]+',

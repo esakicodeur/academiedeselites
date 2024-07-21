@@ -38,6 +38,12 @@
               <li class="nav-item">
                 <a href="{{ route('admin.teacher.index') }}" @class(['nav-link', 'active' => str_contains($route, 'teacher.')])>Enseignants</a>
               </li>
+              <li class="nav-item">
+                <a href="{{ route('admin.user.index') }}" @class(['nav-link', 'active' => str_contains($route, 'user.')])>Utilisateurs</a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route('admin.role.index') }}" @class(['nav-link', 'active' => str_contains($route, 'role.')])>Roles</a>
+              </li>
             </ul>
 
             <div class="navbar-nav ms-auto mb-2 mb-lg-0">

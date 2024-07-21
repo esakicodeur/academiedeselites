@@ -25,6 +25,12 @@
                         <li class="list-group-item">
                             <a class="text-decoration-none text-dark fw-bold" href="{{ route('admin.teacher.index') }}">Enseignants</a>
                         </li>
+                        <li class="list-group-item">
+                            <a class="text-decoration-none text-dark fw-bold" href="{{ route('admin.user.index') }}">Utilisateurs</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a class="text-decoration-none text-dark fw-bold" href="{{ route('admin.role.index') }}">Roles</a>
+                        </li>
                     </ul>
                 </div>
             </div>
