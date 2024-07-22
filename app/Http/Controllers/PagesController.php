@@ -32,6 +32,8 @@ class PagesController extends Controller
         return view('pages.admin', [
             'messages' => Contact::orderBy('created_at', 'desc')->paginate(3),
             'newsletters' => Newsletter::orderBy('created_at', 'desc')->paginate(3),
+            'contacts' => Contact::all(),
+            'emails' => Newsletter::all(),
             'users' => User::all(),
             'students' => Student::all(),
             'teachers' => Teacher::all(),

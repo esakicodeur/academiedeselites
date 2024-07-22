@@ -90,13 +90,13 @@
                     </div>
                     <div class="card bg-light" style="width: 18rem;">
                         <div class="card-body border rounded-3">
-                            <h2>{{ $messages->count() }} <i class="fas fa-phone"></i></h2>
+                            <h2>{{ $contacts->count() }} <i class="fas fa-phone"></i></h2>
                             <p>Contacts</p>
                         </div>
                     </div>
                     <div class="card bg-light" style="width: 18rem;">
                         <div class="card-body border rounded-3">
-                            <h2>{{ $newsletters->count() }} <i class="fas fa-envelope"></i></h2>
+                            <h2>{{ $emails->count() }} <i class="fas fa-envelope"></i></h2>
                             <p>Newsletters</p>
                         </div>
                     </div>
