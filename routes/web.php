@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\PostsController;
 use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\Admin\TagsController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\CommentController;
 use App\Http\Controllers\ContactsController;
 use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\PagesController;
@@ -56,6 +57,10 @@ Route::post('/student', [StudentsController::class, 'store'])->name('student.sto
 // Teacher routes
 Route::get('/teacher', [TeachersController::class, 'create'])->name('teacher.create');
 Route::post('/teacher', [TeachersController::class, 'store'])->name('teacher.store');
+
+Route::group(['middleware' => ['auth']], function () {
+    Route::post('comment/{post}', [CommentController::class, 'store'])->name('comment.store');
+});
 
 // Admin routes
 Route::prefix('admin')->name('admin.')->middleware(['auth', 'role:admin'])->group(function () {
