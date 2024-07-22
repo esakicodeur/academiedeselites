@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\MatiereController;
 use App\Http\Controllers\Admin\NiveauController;
 use App\Http\Controllers\Admin\PostsController;
 use App\Http\Controllers\Admin\RoleController;
+use App\Http\Controllers\Admin\SettingsController;
 use App\Http\Controllers\Admin\TagsController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CommentController;
@@ -68,6 +69,9 @@ Route::prefix('admin')->name('admin.')->middleware(['auth', 'role:admin'])->grou
     Route::get('/', [PagesController::class, 'admin'])->name('admin');
 
     Route::resource('user', \App\Http\Controllers\Admin\UserController::class)->except(['show']);
+
+    Route::get('settings', [SettingsController::class, 'index'])->name('settings.index');
+    Route::put('profile-update', [SettingsController::class, 'updateProfile'])->name('profile.update');
 
     Route::resource('post', PostsController::class)->except(['show']);
     Route::resource('tag', TagsController::class)->except(['show']);

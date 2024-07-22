@@ -11,46 +11,49 @@
                 <div class="bg-light p-5 mb-5">
                     <ul class="list-group">
                         <li class="list-group-item">
-                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.post.index') }}">Articles</a>
+                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.settings.index') }}"><i class="fab fa-facebook"></i> Paramètres</a>
                         </li>
                         <li class="list-group-item">
-                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.category.index') }}">Catégories</a>
+                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.post.index') }}"><i class="fab fa-facebook"></i> Articles</a>
                         </li>
                         <li class="list-group-item">
-                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.tag.index') }}">Tags</a>
+                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.category.index') }}"><i class="fab fa-facebook"></i> Catégories</a>
                         </li>
                         <li class="list-group-item">
-                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.student.index') }}">Elèves</a>
+                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.tag.index') }}"><i class="fab fa-facebook"></i> Tags</a>
                         </li>
                         <li class="list-group-item">
-                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.teacher.index') }}">Enseignants</a>
+                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.student.index') }}"><i class="fab fa-facebook"></i> Elèves</a>
                         </li>
                         <li class="list-group-item">
-                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.user.index') }}">Utilisateurs</a>
+                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.teacher.index') }}"><i class="fab fa-facebook"></i> Enseignants</a>
                         </li>
                         <li class="list-group-item">
-                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.role.index') }}">Roles</a>
+                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.user.index') }}"><i class="fab fa-facebook"></i> Utilisateurs</a>
                         </li>
                         <li class="list-group-item">
-                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.information.index') }}">Informations</a>
+                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.role.index') }}"><i class="fab fa-facebook"></i> Roles</a>
                         </li>
                         <li class="list-group-item">
-                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.jour.index') }}">Jours</a>
+                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.information.index') }}"><i class="fab fa-facebook"></i> Informations</a>
                         </li>
                         <li class="list-group-item">
-                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.matiere.index') }}">Matieres</a>
+                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.jour.index') }}"><i class="fab fa-facebook"></i> Jours</a>
                         </li>
                         <li class="list-group-item">
-                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.niveau.index') }}">Niveaux</a>
+                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.matiere.index') }}"><i class="fab fa-facebook"></i> Matieres</a>
                         </li>
                         <li class="list-group-item">
-                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.contact.index') }}">Contacts</a>
+                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.niveau.index') }}"><i class="fab fa-facebook"></i> Niveaux</a>
                         </li>
                         <li class="list-group-item">
-                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.newsletter.index') }}">Newsletters</a>
+                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.contact.index') }}"><i class="fab fa-facebook"></i> Contacts</a>
                         </li>
                         <li class="list-group-item">
-                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.comment.index') }}">Comments</a>
+                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.newsletter.index') }}"><i class="fab fa-facebook"></i> Newsletters</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.comment.index') }}"><i class="fab fa-facebook"></i> Comments</a>
                         </li>
                     </ul>
                 </div>
