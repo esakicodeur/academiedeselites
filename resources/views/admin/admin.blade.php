@@ -56,6 +56,9 @@
               <li class="nav-item">
                 <a href="{{ route('admin.niveau.index') }}" @class(['nav-link', 'active' => str_contains($route, 'niveau.')])>Niveaux</a>
               </li>
+              <li class="nav-item">
+                <a href="{{ route('admin.contact.index') }}" @class(['nav-link', 'active' => str_contains($route, 'contact.')])>Contacts</a>
+              </li>
             </ul>
 
             <div class="navbar-nav ms-auto mb-2 mb-lg-0">

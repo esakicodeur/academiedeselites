@@ -72,6 +72,9 @@ Route::prefix('admin')->name('admin.')->middleware(['auth', 'role:admin'])->grou
     Route::resource('matiere', MatiereController::class)->except(['show']);
     Route::resource('niveau', NiveauController::class)->except(['show']);
 
+    Route::get('/newsletter', [NewsletterController::class, 'index'])->name('newsletter.index');
+
+    Route::get('/contact', [ContactsController::class, 'index'])->name('contact.index');
     Route::get('/contact/{slug}-{contact}', [ContactsController::class, 'show'])->name('contact.show')->where([
         'contact' => '[0-9]+',
         'slug' => '[0-9a-z\-]+'

@@ -8,6 +8,13 @@ use Illuminate\Http\Request;
 
 class ContactsController extends Controller
 {
+    public function index()
+    {
+        return view('contacts.index', [
+            'messages' => Contact::orderBy('created_at', 'desc')->paginate(25)
+        ]);
+    }
+
     public function create() {
         return view('contacts.create');
     }

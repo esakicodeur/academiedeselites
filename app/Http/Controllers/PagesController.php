@@ -26,8 +26,8 @@ class PagesController extends Controller
 
     public function admin() {
         return view('pages.admin', [
-            'messages' => Contact::orderBy('created_at', 'desc')->paginate(25),
-            'newsletters' => Newsletter::orderBy('created_at', 'desc')->paginate(25),
+            'messages' => Contact::orderBy('created_at', 'desc')->paginate(3),
+            'newsletters' => Newsletter::orderBy('created_at', 'desc')->paginate(3),
         ]);
     }
 }

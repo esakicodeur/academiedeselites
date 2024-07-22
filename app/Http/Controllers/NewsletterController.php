@@ -8,6 +8,13 @@ use Illuminate\Http\Request;
 
 class NewsletterController extends Controller
 {
+    public function index()
+    {
+        return view('newsletters.index', [
+            'newsletters' => Newsletter::orderBy('created_at', 'desc')->paginate(25)
+        ]);
+    }
+
     public function create() {
         return view('newsletters.create');
     }

@@ -4,7 +4,7 @@
 <div class="wrapper">
     <div class="section-post-detail">
         <div class="post-detail-img">
-            <img src="{{ asset('images/blog-2.png') }}" alt="post-detail-image">
+            <img src="{{ $post->imageUrl() }}" alt="post-detail-image">
         </div>
 
         <h1>{{ $post->title }}</h1>

@@ -43,6 +43,12 @@
                         <li class="list-group-item">
                             <a class="text-decoration-none text-dark fw-bold" href="{{ route('admin.niveau.index') }}">Niveaux</a>
                         </li>
+                        <li class="list-group-item">
+                            <a class="text-decoration-none text-dark fw-bold" href="{{ route('admin.contact.index') }}">Contacts</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a class="text-decoration-none text-dark fw-bold" href="{{ route('admin.newsletter.index') }}">Newsletters</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -99,10 +105,6 @@
                             @endforeach
                         </tbody>
                     </table>
-
-                    <div class="paginate">
-                        {{ $messages->links() }}
-                    </div>
                 </div>
 
                 <div>
@@ -121,10 +123,6 @@
                             @endforeach
                         </tbody>
                     </table>
-
-                    <div class="paginate">
-                        {{ $newsletters->links() }}
-                    </div>
                 </div>
             </div>
 
