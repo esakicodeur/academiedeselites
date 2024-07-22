@@ -72,6 +72,7 @@ Route::prefix('admin')->name('admin.')->middleware(['auth', 'role:admin'])->grou
 
     Route::get('settings', [SettingsController::class, 'index'])->name('settings.index');
     Route::put('profile-update', [SettingsController::class, 'updateProfile'])->name('profile.update');
+    Route::put('password-update', [SettingsController::class, 'updatePassword'])->name('password.update');
 
     Route::resource('post', PostsController::class)->except(['show']);
     Route::resource('tag', TagsController::class)->except(['show']);

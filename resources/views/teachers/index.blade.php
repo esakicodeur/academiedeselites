@@ -28,8 +28,8 @@
                     <td>{{ $teacher->ville }}</td>
                     <td>
                         <div class="d-flex gap-2 w-100 justify-content-end">
-                            <a href="{{ route('admin.teacher.show', ['slug' => $teacher->getSlug(), 'teacher' => $teacher]) }}" class="btn btn-primary">Voir</a>
-                            <a href="{{ route('admin.teacher.pdf', ['slug' => $teacher->getSlug(), 'teacher' => $teacher]) }}" class="btn btn-primary">PDF</a>
+                            <a href="{{ route('admin.teacher.show', ['slug' => $teacher->getSlug(), 'teacher' => $teacher]) }}" class="btn btn-primary"><i class="fas fa-eye"></i></a>
+                            <a href="{{ route('admin.teacher.pdf', ['slug' => $teacher->getSlug(), 'teacher' => $teacher]) }}" class="btn btn-primary"><i class="fas fa-download"></i></a>
                         </div>
                     </td>
                 </tr>

@@ -23,14 +23,16 @@
 
     </form>
 
-    <form action="#" method="POST" enctype="multipart/form-data" class="bg-light py-5 px-5 mt-5">
+    <form action="{{ route('admin.password.update') }}" method="POST" enctype="multipart/form-data" class="bg-light py-5 px-5 mt-5">
 
         @csrf
         @method('put')
 
-        @include('shared.input', ['label' => 'Mot de passe', 'name' => 'password', 'type' => 'password'])
+        @include('shared.input', ['label' => 'Ancien mot de passe', 'name' => 'old_password', 'type' => 'password'])
 
-        @include('shared.input', ['label' => 'Confirmez mot de passe', 'name' => 'password_confirmation', 'type' => 'password'])
+        @include('shared.input', ['label' => 'Nouveau mot de passe', 'name' => 'password', 'type' => 'password'])
+
+        @include('shared.input', ['label' => 'Confirmez nouveau mot de passe', 'name' => 'password_confirmation', 'type' => 'password'])
 
         <p>
             <button class="btn btn-primary">

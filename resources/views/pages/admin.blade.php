@@ -11,49 +11,49 @@
                 <div class="bg-light p-5 mb-5">
                     <ul class="list-group">
                         <li class="list-group-item">
-                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.settings.index') }}"><i class="fab fa-facebook"></i> Paramètres</a>
+                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.settings.index') }}"><i class="fas fa-gear"></i> Paramètres</a>
                         </li>
                         <li class="list-group-item">
-                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.post.index') }}"><i class="fab fa-facebook"></i> Articles</a>
+                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.post.index') }}"><i class="fas fa-book"></i> Articles</a>
                         </li>
                         <li class="list-group-item">
-                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.category.index') }}"><i class="fab fa-facebook"></i> Catégories</a>
+                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.category.index') }}"><i class="fab fa-hashtag"></i> Catégories</a>
                         </li>
                         <li class="list-group-item">
-                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.tag.index') }}"><i class="fab fa-facebook"></i> Tags</a>
+                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.tag.index') }}"><i class="fas fa-tag"></i> Tags</a>
                         </li>
                         <li class="list-group-item">
-                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.student.index') }}"><i class="fab fa-facebook"></i> Elèves</a>
+                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.student.index') }}"><i class="fas fa-user-pen"></i> Elèves</a>
                         </li>
                         <li class="list-group-item">
-                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.teacher.index') }}"><i class="fab fa-facebook"></i> Enseignants</a>
+                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.teacher.index') }}"><i class="fas fa-user-gear"></i> Enseignants</a>
                         </li>
                         <li class="list-group-item">
-                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.user.index') }}"><i class="fab fa-facebook"></i> Utilisateurs</a>
+                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.user.index') }}"><i class="fas fa-user"></i> Utilisateurs</a>
                         </li>
                         <li class="list-group-item">
-                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.role.index') }}"><i class="fab fa-facebook"></i> Roles</a>
+                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.role.index') }}"><i class="fas fa-sun"></i> Roles</a>
                         </li>
                         <li class="list-group-item">
-                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.information.index') }}"><i class="fab fa-facebook"></i> Informations</a>
+                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.information.index') }}"><i class="fas fa-info"></i> Informations</a>
                         </li>
                         <li class="list-group-item">
-                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.jour.index') }}"><i class="fab fa-facebook"></i> Jours</a>
+                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.jour.index') }}"><i class="fas fa-calendar-days"></i> Jours</a>
                         </li>
                         <li class="list-group-item">
-                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.matiere.index') }}"><i class="fab fa-facebook"></i> Matieres</a>
+                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.matiere.index') }}"><i class="fas fa-book-open"></i> Matieres</a>
                         </li>
                         <li class="list-group-item">
-                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.niveau.index') }}"><i class="fab fa-facebook"></i> Niveaux</a>
+                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.niveau.index') }}"><i class="fas fa-school"></i> Niveaux</a>
                         </li>
                         <li class="list-group-item">
-                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.contact.index') }}"><i class="fab fa-facebook"></i> Contacts</a>
+                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.contact.index') }}"><i class="fas fa-phone"></i> Contacts</a>
                         </li>
                         <li class="list-group-item">
-                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.newsletter.index') }}"><i class="fab fa-facebook"></i> Newsletters</a>
+                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.newsletter.index') }}"><i class="fas fa-envelope"></i> Newsletters</a>
                         </li>
                         <li class="list-group-item">
-                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.comment.index') }}"><i class="fab fa-facebook"></i> Comments</a>
+                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.comment.index') }}"><i class="fas fa-comments"></i> Comments</a>
                         </li>
                     </ul>
                 </div>
@@ -63,19 +63,19 @@
                 <div class="d-flex align-items-center justify-content-between gap-2">
                     <div class="card bg-light" style="width: 18rem;">
                         <div class="card-body border rounded-3">
-                            <h2>{{ $users->count() }}</h2>
+                            <h2>{{ $users->count() }} <i class="fas fa-user"></i></h2>
                             <p>Utilisateurs</p>
                         </div>
                     </div>
                     <div class="card bg-light" style="width: 18rem;">
                         <div class="card-body border rounded-3">
-                            <h2>{{ $students->count() }}</h2>
+                            <h2>{{ $students->count() }} <i class="fas fa-user-pen"></i></h2>
                             <p>Eleves</p>
                         </div>
                     </div>
                     <div class="card bg-light" style="width: 18rem;">
                         <div class="card-body border rounded-3">
-                            <h2>{{ $teachers->count() }}</h2>
+                            <h2>{{ $teachers->count() }} <i class="fas fa-user-gear"></i></h2>
                             <p>Enseignants</p>
                         </div>
                     </div>
@@ -84,19 +84,19 @@
                 <div class="d-flex align-items-center justify-content-between gap-2 mt-3">
                     <div class="card bg-light" style="width: 18rem;">
                         <div class="card-body border rounded-3">
-                            <h2>{{ $posts->count() }}</h2>
+                            <h2>{{ $posts->count() }} <i class="fas fa-book"></i></h2>
                             <p>Articles</p>
                         </div>
                     </div>
                     <div class="card bg-light" style="width: 18rem;">
                         <div class="card-body border rounded-3">
-                            <h2>{{ $messages->count() }}</h2>
+                            <h2>{{ $messages->count() }} <i class="fas fa-phone"></i></h2>
                             <p>Contacts</p>
                         </div>
                     </div>
                     <div class="card bg-light" style="width: 18rem;">
                         <div class="card-body border rounded-3">
-                            <h2>{{ $newsletters->count() }}</h2>
+                            <h2>{{ $newsletters->count() }} <i class="fas fa-envelope"></i></h2>
                             <p>Newsletters</p>
                         </div>
                     </div>
@@ -125,7 +125,7 @@
                                     <td>{{ $message->ville }}</td>
                                     <td>
                                         <div class="d-flex gap-2 w-100 justify-content-end">
-                                            <a href="{{ route('admin.contact.show', ['slug' => $message->getSlug(), 'contact' => $message]) }}" class="btn btn-primary">Voir</a>
+                                            <a href="{{ route('admin.contact.show', ['slug' => $message->getSlug(), 'contact' => $message]) }}" class="btn btn-primary"><i class="fas fa-eye"></i></a>
                                         </div>
                                     </td>
                                 </tr>
