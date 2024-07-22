@@ -49,6 +49,9 @@
                         <li class="list-group-item">
                             <a class="text-decoration-none text-dark fw-bold" href="{{ route('admin.newsletter.index') }}">Newsletters</a>
                         </li>
+                        <li class="list-group-item">
+                            <a class="text-decoration-none text-dark fw-bold" href="{{ route('admin.comment.index') }}">Comments</a>
+                        </li>
                     </ul>
                 </div>
             </div>
