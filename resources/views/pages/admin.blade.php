@@ -11,46 +11,46 @@
                 <div class="bg-light p-5 mb-5">
                     <ul class="list-group">
                         <li class="list-group-item">
-                            <a class="text-decoration-none text-dark fw-bold" href="{{ route('admin.post.index') }}">Articles</a>
+                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.post.index') }}">Articles</a>
                         </li>
                         <li class="list-group-item">
-                            <a class="text-decoration-none text-dark fw-bold" href="{{ route('admin.category.index') }}">Catégories</a>
+                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.category.index') }}">Catégories</a>
                         </li>
                         <li class="list-group-item">
-                            <a class="text-decoration-none text-dark fw-bold" href="{{ route('admin.tag.index') }}">Tags</a>
+                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.tag.index') }}">Tags</a>
                         </li>
                         <li class="list-group-item">
-                            <a class="text-decoration-none text-dark fw-bold" href="{{ route('admin.student.index') }}">Elèves</a>
+                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.student.index') }}">Elèves</a>
                         </li>
                         <li class="list-group-item">
-                            <a class="text-decoration-none text-dark fw-bold" href="{{ route('admin.teacher.index') }}">Enseignants</a>
+                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.teacher.index') }}">Enseignants</a>
                         </li>
                         <li class="list-group-item">
-                            <a class="text-decoration-none text-dark fw-bold" href="{{ route('admin.user.index') }}">Utilisateurs</a>
+                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.user.index') }}">Utilisateurs</a>
                         </li>
                         <li class="list-group-item">
-                            <a class="text-decoration-none text-dark fw-bold" href="{{ route('admin.role.index') }}">Roles</a>
+                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.role.index') }}">Roles</a>
                         </li>
                         <li class="list-group-item">
-                            <a class="text-decoration-none text-dark fw-bold" href="{{ route('admin.information.index') }}">Informations</a>
+                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.information.index') }}">Informations</a>
                         </li>
                         <li class="list-group-item">
-                            <a class="text-decoration-none text-dark fw-bold" href="{{ route('admin.jour.index') }}">Jours</a>
+                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.jour.index') }}">Jours</a>
                         </li>
                         <li class="list-group-item">
-                            <a class="text-decoration-none text-dark fw-bold" href="{{ route('admin.matiere.index') }}">Matieres</a>
+                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.matiere.index') }}">Matieres</a>
                         </li>
                         <li class="list-group-item">
-                            <a class="text-decoration-none text-dark fw-bold" href="{{ route('admin.niveau.index') }}">Niveaux</a>
+                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.niveau.index') }}">Niveaux</a>
                         </li>
                         <li class="list-group-item">
-                            <a class="text-decoration-none text-dark fw-bold" href="{{ route('admin.contact.index') }}">Contacts</a>
+                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.contact.index') }}">Contacts</a>
                         </li>
                         <li class="list-group-item">
-                            <a class="text-decoration-none text-dark fw-bold" href="{{ route('admin.newsletter.index') }}">Newsletters</a>
+                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.newsletter.index') }}">Newsletters</a>
                         </li>
                         <li class="list-group-item">
-                            <a class="text-decoration-none text-dark fw-bold" href="{{ route('admin.comment.index') }}">Comments</a>
+                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.comment.index') }}">Comments</a>
                         </li>
                     </ul>
                 </div>

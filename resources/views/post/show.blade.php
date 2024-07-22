@@ -32,7 +32,7 @@
                     </p>
 
                     <div class="w-100">
-                        <h3>{{ $post->comments()->count() }} Commentaire(s)</h3>
+                        <h3>Poster un commentaire.</h3>
 
                         @guest
                             <h5 class="bg-light py-3 px-5 mb-5">
@@ -52,23 +52,31 @@
                             </form>
                         @endguest
 
+                        <h3>
+                            @if ($post->comments()->count() === 1)
+                                {{ $post->comments()->count() }} Commentaire
+                            @elseif ($post->comments()->count() > 1)
+                                {{ $post->comments()->count() }} Commentaires
+                            @endif
+                        </h3>
+
                         @if ($post->comments->count() > 0)
                             <div class="bg-light py-4 px-3 mb-5">
                                 @foreach ($post->comments as $comment)
                                     <div class="row my-3">
                                         <div class="d-flex">
                                             <div>
-                                                <img src="{{ $post->imageUrl() }}" class="rounded-5" alt="..." style="width: 50px; height: 50px;">
+                                                <img src="{{ asset('images/default.png') }}" class="rounded-5" alt="..." style="width: 50px; height: 50px;">
                                             </div>
 
                                             <div class="row">
-                                                <div class="d-flex align-items-center justify-content-between mx-3">
-                                                    <p class="fw-bold">
+                                                <div class="d-flex justify-content-between mx-3">
+                                                    <div class="fw-bold">
                                                         {{ $comment->user->name }}
-                                                    </p>
-                                                    <p class="mx-3">
-                                                        <small class="text-muted">{{ $comment->created_at->diffForHumans() }}</small>
-                                                    </p>
+                                                    </div>
+                                                    <div class="align-content-end">
+                                                        <span class="text-muted">{{ $comment->created_at->diffForHumans() }}</span>
+                                                    </div>
                                                 </div>
                                                 <p class="card-text mx-3">
                                                     {{ $comment->comment }}

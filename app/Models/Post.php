@@ -58,7 +58,7 @@ class Post extends Model
 
     public function getFormattedDate(): string
     {
-        return $this->created_at->format('F jS Y');
+        return $this->created_at->diffForHumans();
     }
 
     public function imageUrl(): string

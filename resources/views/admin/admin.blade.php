@@ -7,6 +7,8 @@
     @vite(['resources/css/app.css', 'resources/css/main.css', 'resources/js/app.js', 'resources/js/main.js'])
     <link href="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/css/tom-select.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/js/tom-select.complete.min.js"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/34.0.0/classic/ckeditor.js"></script>
+
     <title>@yield('title') | Administration</title>
 </head>
 <body>
@@ -76,7 +78,19 @@
     </div>
 
     <script>
+        // Initialize TomSelect
         new TomSelect('select[multiple]', { plugins: {remove_button: {title: 'Supprimer'}} })
+
+        // Initialize CKEditor
+        ClassicEditor
+            .create(document.querySelector('textarea'))
+            .then(editor => {
+                console.log('Editor was initialized', editor);
+            })
+            .catch(error => {
+                console.error('Error during initialization of the editor', error);
+            });
     </script>
+
 </body>
 </html>

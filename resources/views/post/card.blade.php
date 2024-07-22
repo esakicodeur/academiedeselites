@@ -22,5 +22,9 @@
         <a href="#">
             {{ $post->shortBody() }}
         </a>
+        <div class="d-flex justify-content-between mx-3">
+            <div>0 <i class="fas fa-heart"></i></div>
+            <div><a href="{{ route('blog.show', ['slug' => $post->getSlug(), 'post' => $post]) }}">{{ $post->comments()->count() }} <i class="fas fa-comment"></i></a></div>
+        </div>
     </div>
 </div>

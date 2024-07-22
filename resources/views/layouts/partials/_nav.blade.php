@@ -26,7 +26,7 @@
 
 <nav class="navigation mobile-nav">
     <div class="logo">
-        <img src="{{ asset('images/Logo-Mobile.png') }}" alt="logo">
+        <a href="{{ route('home') }}"><img src="{{ asset('images/Logo-Mobile.png') }}" alt="logo"></a>
     </div>
     <div class="menu-icon">
         <img src="{{ asset('images/Menu-bars.png') }}" alt="logo">
