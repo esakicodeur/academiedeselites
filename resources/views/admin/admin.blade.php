@@ -27,12 +27,6 @@
                 <a href="{{ route('admin.post.index') }}" @class(['nav-link', 'active' => str_contains($route, 'post.')])>Articles</a>
               </li>
               <li class="nav-item">
-                <a href="{{ route('admin.category.index') }}" @class(['nav-link', 'active' => str_contains($route, 'category.')])>Catégories</a>
-              </li>
-              <li class="nav-item">
-                <a href="{{ route('admin.tag.index') }}" @class(['nav-link', 'active' => str_contains($route, 'tag.')])>Tags</a>
-              </li>
-              <li class="nav-item">
                 <a href="{{ route('admin.student.index') }}" @class(['nav-link', 'active' => str_contains($route, 'student.')])>Elèves</a>
               </li>
               <li class="nav-item">
@@ -40,21 +34,6 @@
               </li>
               <li class="nav-item">
                 <a href="{{ route('admin.user.index') }}" @class(['nav-link', 'active' => str_contains($route, 'user.')])>Utilisateurs</a>
-              </li>
-              <li class="nav-item">
-                <a href="{{ route('admin.role.index') }}" @class(['nav-link', 'active' => str_contains($route, 'role.')])>Roles</a>
-              </li>
-              <li class="nav-item">
-                <a href="{{ route('admin.information.index') }}" @class(['nav-link', 'active' => str_contains($route, 'information.')])>Informations</a>
-              </li>
-              <li class="nav-item">
-                <a href="{{ route('admin.jour.index') }}" @class(['nav-link', 'active' => str_contains($route, 'jour.')])>Jours</a>
-              </li>
-              <li class="nav-item">
-                <a href="{{ route('admin.matiere.index') }}" @class(['nav-link', 'active' => str_contains($route, 'matiere.')])>Matieres</a>
-              </li>
-              <li class="nav-item">
-                <a href="{{ route('admin.niveau.index') }}" @class(['nav-link', 'active' => str_contains($route, 'niveau.')])>Niveaux</a>
               </li>
               <li class="nav-item">
                 <a href="{{ route('admin.contact.index') }}" @class(['nav-link', 'active' => str_contains($route, 'contact.')])>Contacts</a>

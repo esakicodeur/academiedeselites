@@ -57,20 +57,41 @@
                 <div class="d-flex align-items-center justify-content-between gap-2">
                     <div class="card bg-light" style="width: 18rem;">
                         <div class="card-body border rounded-3">
-                            <h2>100</h2>
+                            <h2>{{ $users->count() }}</h2>
                             <p>Utilisateurs</p>
                         </div>
                     </div>
                     <div class="card bg-light" style="width: 18rem;">
                         <div class="card-body border rounded-3">
-                            <h2>54</h2>
+                            <h2>{{ $students->count() }}</h2>
+                            <p>Eleves</p>
+                        </div>
+                    </div>
+                    <div class="card bg-light" style="width: 18rem;">
+                        <div class="card-body border rounded-3">
+                            <h2>{{ $teachers->count() }}</h2>
+                            <p>Enseignants</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-center justify-content-between gap-2 mt-3">
+                    <div class="card bg-light" style="width: 18rem;">
+                        <div class="card-body border rounded-3">
+                            <h2>{{ $posts->count() }}</h2>
                             <p>Articles</p>
                         </div>
                     </div>
                     <div class="card bg-light" style="width: 18rem;">
                         <div class="card-body border rounded-3">
-                            <h2>60</h2>
-                            <p>Messages</p>
+                            <h2>{{ $messages->count() }}</h2>
+                            <p>Contacts</p>
+                        </div>
+                    </div>
+                    <div class="card bg-light" style="width: 18rem;">
+                        <div class="card-body border rounded-3">
+                            <h2>{{ $newsletters->count() }}</h2>
+                            <p>Newsletters</p>
                         </div>
                     </div>
                 </div>

@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\Contact;
 use App\Models\Newsletter;
+use App\Models\Post;
+use App\Models\Student;
+use App\Models\Teacher;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
@@ -28,6 +32,10 @@ class PagesController extends Controller
         return view('pages.admin', [
             'messages' => Contact::orderBy('created_at', 'desc')->paginate(3),
             'newsletters' => Newsletter::orderBy('created_at', 'desc')->paginate(3),
+            'users' => User::all(),
+            'students' => Student::all(),
+            'teachers' => Teacher::all(),
+            'posts' => Post::all(),
         ]);
     }
 }
