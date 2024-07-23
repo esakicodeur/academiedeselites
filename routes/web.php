@@ -13,6 +13,7 @@ use App\Http\Controllers\Admin\TagsController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\ContactsController;
+use App\Http\Controllers\FavoriteController;
 use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\StudentsController;
@@ -62,6 +63,7 @@ Route::post('/teacher', [TeachersController::class, 'store'])->name('teacher.sto
 
 Route::group(['middleware' => ['auth']], function () {
     Route::post('comment/{post}', [CommentController::class, 'store'])->name('comment.store');
+    Route::post('favorite/{post}/add', [FavoriteController::class, 'add'])->name('post.favorite');
 });
 
 // Admin routes

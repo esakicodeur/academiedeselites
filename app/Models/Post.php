@@ -41,6 +41,11 @@ class Post extends Model
         return $this->hasMany(Comment::class);
     }
 
+    public function favorite_to_users(): BelongsToMany
+    {
+        return $this->belongsToMany(User::class)->withTimestamps();
+    }
+
     public function getSlug(): string
     {
         return Str::slug($this->title);

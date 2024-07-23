@@ -23,7 +23,26 @@
             {{ $post->shortBody() }}
         </a>
         <div class="d-flex justify-content-between mx-3">
-            <div>0 <i class="fas fa-heart"></i></div>
+            @guest
+                <div>
+                    {{ $post->favorite_to_users->count() }}
+                    <a href="javascript:void(0);" onclick="alert('Pour ajouter une liste de favoris. Vous devez d\'abord vous connecter.')">
+                        <i class="fas fa-heart"></i>
+                    </a>
+                </div>
+            @else
+                <div>
+                    {{ $post->favorite_to_users->count() }}
+                    <a href="javascript:void(0);" onclick="document.getElementById('favorite-form-{{ $post->id }}').submit();" class="{{ !Auth::user()->favorite_posts->where('pivot.post_id', $post->id)->count() == 0 ? 'text-danger' : '' }}">
+                        <i class="fas fa-heart"></i>
+                    </a>
+                </div>
+
+                <form action="{{ route('post.favorite', $post->id) }}" id="favorite-form-{{ $post->id }}" method="POST" style="display: none;">
+                    @csrf
+                </form>
+            @endguest
+
             <div><a href="{{ route('blog.show', ['slug' => $post->getSlug(), 'post' => $post]) }}">{{ $post->comments()->count() }} <i class="fas fa-comment"></i></a></div>
         </div>
     </div>
