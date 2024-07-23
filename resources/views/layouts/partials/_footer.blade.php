@@ -78,7 +78,7 @@
         <hr>
 
         <div class="copyright">
-            <p>Copyright &copy; {{ date('Y') }} - Academie des élites - Tous droits réservés par Alex Georgy Esaki</p>
+            <p>Copyright &copy; {{ date('Y') }} - Academie des élites - Tous droits réservés par <strong>Alex Georgy Esaki</strong></p>
         </div>
     </div>
 </footer>
