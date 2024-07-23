@@ -58,6 +58,9 @@
                         <li class="list-group-item">
                             <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.favorite.index') }}"><i class="fas fa-heart"></i> Favoris</a>
                         </li>
+                        <li class="list-group-item">
+                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.policy.index') }}"><i class="fas fa-gears"></i> Policy</a>
+                        </li>
                     </ul>
                 </div>
             </div>

@@ -56,9 +56,19 @@ class Post extends Model
         return Str::words(strip_tags($this->title), 2);
     }
 
+    public function shortTitleAdmin(): string
+    {
+        return Str::words(strip_tags($this->title), 8);
+    }
+
     public function shortBody(): string
     {
         return Str::words(strip_tags($this->description), 30);
+    }
+
+    public function shortBodyAdmin(): string
+    {
+        return Str::words(strip_tags($this->description), 10);
     }
 
     public function getFormattedDate(): string

@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\InformationController;
 use App\Http\Controllers\Admin\JourController;
 use App\Http\Controllers\Admin\MatiereController;
 use App\Http\Controllers\Admin\NiveauController;
+use App\Http\Controllers\Admin\PolicyController;
 use App\Http\Controllers\Admin\PostsController;
 use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\Admin\SettingsController;
@@ -85,6 +86,8 @@ Route::prefix('admin')->name('admin.')->middleware(['auth', 'role:admin'])->grou
     Route::resource('jour', JourController::class)->except(['show']);
     Route::resource('matiere', MatiereController::class)->except(['show']);
     Route::resource('niveau', NiveauController::class)->except(['show']);
+
+    Route::resource('policy', PolicyController::class)->except(['show']);
 
     Route::get('/newsletter', [NewsletterController::class, 'index'])->name('newsletter.index');
 

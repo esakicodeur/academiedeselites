@@ -1,24 +1,13 @@
-@extends('layouts.default', ['title' => 'Services'])
+@extends('layouts.default', ['title' => 'Policy'])
 
 @section('content')
 <div class="wrapper">
     <div class="section-post-detail">
-        <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam repellat temporibus omnis minus, quia iste quae. Labore voluptatibus velit blanditiis inventore quis voluptates ipsa numquam, deserunt eligendi id aliquid asperiores.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quasi expedita hic facere doloremque eaque dolore, a eum iste sunt cumque repudiandae illo sapiente ut magni non accusantium voluptatibus est!
-        </p>
-        <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam repellat temporibus omnis minus, quia iste quae. Labore voluptatibus velit blanditiis inventore quis voluptates ipsa numquam, deserunt eligendi id aliquid asperiores.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quasi expedita hic facere doloremque eaque dolore, a eum iste sunt cumque repudiandae illo sapiente ut magni non accusantium voluptatibus est!
-        </p>
-        <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam repellat temporibus omnis minus, quia iste quae. Labore voluptatibus velit blanditiis inventore quis voluptates ipsa numquam, deserunt eligendi id aliquid asperiores.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quasi expedita hic facere doloremque eaque dolore, a eum iste sunt cumque repudiandae illo sapiente ut magni non accusantium voluptatibus est!
-        </p>
-        <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam repellat temporibus omnis minus, quia iste quae. Labore voluptatibus velit blanditiis inventore quis voluptates ipsa numquam, deserunt eligendi id aliquid asperiores.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quasi expedita hic facere doloremque eaque dolore, a eum iste sunt cumque repudiandae illo sapiente ut magni non accusantium voluptatibus est!
-        </p>
+        @foreach ($policies as $policy)
+            <div>
+                {!! $policy->description !!}
+            </div>
+        @endforeach
     </div>
 </div>
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Contact;
 use App\Models\Newsletter;
+use App\Models\Policy;
 use App\Models\Post;
 use App\Models\Student;
 use App\Models\Teacher;
@@ -25,7 +26,9 @@ class PagesController extends Controller
     }
 
     public function policy() {
-        return view('pages.policy');
+        return view('pages.policy', [
+            'policies' => Policy::all()
+        ]);
     }
 
     public function admin() {
