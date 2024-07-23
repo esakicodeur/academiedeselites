@@ -61,6 +61,9 @@
                         <li class="list-group-item">
                             <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.policy.index') }}"><i class="fas fa-gears"></i> Policy</a>
                         </li>
+                        <li class="list-group-item">
+                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.about.index') }}"><i class="fas fa-building"></i> A propos</a>
+                        </li>
                     </ul>
                 </div>
             </div>

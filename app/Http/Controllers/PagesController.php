@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\About;
 use App\Models\Contact;
 use App\Models\Newsletter;
 use App\Models\Policy;
@@ -18,7 +19,9 @@ class PagesController extends Controller
     }
 
     public function about() {
-        return view('pages.about');
+        return view('pages.about', [
+            'abouts' => About::all()
+        ]);
     }
 
     public function services() {

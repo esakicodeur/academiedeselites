@@ -21,7 +21,7 @@
             @if (Route::is('home'))
                 <x-hero-section />
             @elseif (Route::is('about'))
-                <x-hero-section-about />
+                <x-hero-section-about :abouts="$abouts" />
             @elseif (Route::is('services'))
                 <x-hero-section-services />
             @elseif (Route::is('contact.create'))

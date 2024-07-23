@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AboutController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\CommentsController;
 use App\Http\Controllers\Admin\FavoritesController;
@@ -88,6 +89,7 @@ Route::prefix('admin')->name('admin.')->middleware(['auth', 'role:admin'])->grou
     Route::resource('niveau', NiveauController::class)->except(['show']);
 
     Route::resource('policy', PolicyController::class)->except(['show']);
+    Route::resource('about', AboutController::class)->except(['show']);
 
     Route::get('/newsletter', [NewsletterController::class, 'index'])->name('newsletter.index');
 

@@ -11,8 +11,6 @@
         @csrf
         @method($policy->exists ? 'put' : 'post')
 
-        {{-- @include('shared.input', ['type' => 'textarea', 'label' => 'Description', 'name' => 'description', 'value' => $policy->description]) --}}
-
         <p class="form-group">
             <label for="description" class="form-label">Description</label>
             <textarea id="myeditorinstance" class="form-control tinymce @error('description') is-invalid @enderror" name="description">{{ $policy->description }}</textarea>
