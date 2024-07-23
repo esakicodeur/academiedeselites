@@ -55,6 +55,9 @@
                         <li class="list-group-item">
                             <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.comment.index') }}"><i class="fas fa-comments"></i> Comments</a>
                         </li>
+                        <li class="list-group-item">
+                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.favorite.index') }}"><i class="fas fa-heart"></i> Favoris</a>
+                        </li>
                     </ul>
                 </div>
             </div>

@@ -26,7 +26,7 @@
             @guest
                 <div>
                     {{ $post->favorite_to_users->count() }}
-                    <a href="javascript:void(0);" onclick="alert('Pour ajouter une liste de favoris. Vous devez d\'abord vous connecter.')">
+                    <a href="javascript:void(0);" onclick="alert('Pour liker, vous devez d\'abord vous connecter.')">
                         <i class="fas fa-heart"></i>
                     </a>
                 </div>

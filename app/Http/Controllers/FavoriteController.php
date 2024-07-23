@@ -14,12 +14,12 @@ class FavoriteController extends Controller
         if ($isFavorite == 0) {
             $user->favorite_posts()->attach($post);
 
-            flashy()->success('Article ajouté à votre liste de favoris :)');
+            flashy()->success('Vous venez de liker cet article :)');
             return redirect()->back();
         } else {
             $user->favorite_posts()->detach($post);
 
-            flashy()->success('Article retiré de votre liste de favoris :)');
+            flashy()->success('Vous venez de retirer votre like :)');
             return redirect()->back();
         }
     }

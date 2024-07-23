@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\CommentsController;
+use App\Http\Controllers\Admin\FavoritesController;
 use App\Http\Controllers\Admin\InformationController;
 use App\Http\Controllers\Admin\JourController;
 use App\Http\Controllers\Admin\MatiereController;
@@ -115,6 +116,8 @@ Route::prefix('admin')->name('admin.')->middleware(['auth', 'role:admin'])->grou
 
     Route::get('/comments', [CommentsController::class, 'index'])->name('comment.index');
     Route::delete('/comments/{id}', [CommentsController::class, 'destroy'])->name('comment.destroy');
+
+    Route::get('/favorite', [FavoritesController::class, 'index'])->name('favorite.index');
 });
 
 // Auth routes
