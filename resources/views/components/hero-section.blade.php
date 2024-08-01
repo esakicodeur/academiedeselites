@@ -8,7 +8,7 @@
             Augmentez votre confiance, vos aptitudes et améliorez vos notes en résolvant en temps réel et peut importe où vous êtes vos lacunes.
         </p>
 
-        <a href="#" class="button pink enrol-icon"> <img src="images/PencilAlt.png" alt="">Nous contacter</a>
+        <a href="{{ route('contact.create') }}" class="button pink enrol-icon"> <img src="images/PencilAlt.png" alt="">Nous contacter</a>
     </div>
 
     <div class="right">

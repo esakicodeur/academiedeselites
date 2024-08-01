@@ -45,11 +45,11 @@
             <h3>Nos réseaux sociaux</h3>
 
             <div class="social-medias">
-                <a href="#"><img src="images/facebook.png" alt=""></a>
-                <a href="#"><img src="images/twitter.png" alt=""></a>
-                <a href="#"><img src="images/linkedin.png" alt=""></a>
-                <a href="#"><img src="images/instagram.png" alt=""></a>
-                <a href="#"><img src="images/youtube.png" alt=""></a>
+                <a href="https://web.facebook.com/profile.php?id=61562581510657" target="_blank"><img src="images/facebook.png" alt=""></a>
+                <a href="https://www.youtube.com/channel/UC42lGP9CzM0j11nXtEfxZLg" target="_blank"><img src="images/youtube.png" alt=""></a>
+                <a href="https://www.tiktok.com/@academiedeselites237?lang=fr" target="_blank"><img src="images/tiktok.png" alt=""></a>
+                <a href="#" target="_blank"><img src="images/linkedin.png" alt=""></a>
+                <a href="https://www.instagram.com/elitesacademiedes/" target="_blank"><img src="images/instagram.png" alt=""></a>
             </div>
         </div>
         <div class="col-md-6">

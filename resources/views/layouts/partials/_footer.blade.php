@@ -25,11 +25,11 @@
 
                 <h4>Nos réseaux sociaux</h4>
                 <div class="social-medias">
-                    <a href="about.html"><img src="{{ asset('images/facebook.png') }}" alt=""></a>
-                    <a href="about.html"><img src="{{ asset('images/twitter.png') }}" alt=""></a>
-                    <a href="about.html"><img src="{{ asset('images/linkedin.png') }}" alt=""></a>
-                    <a href="about.html"><img src="{{ asset('images/instagram.png') }}" alt=""></a>
-                    <a href="about.html"><img src="{{ asset('images/youtube.png') }}" alt=""></a>
+                    <a href="https://web.facebook.com/profile.php?id=61562581510657" target="_blank"><img src="{{ asset('images/facebook.png') }}" alt=""></a>
+                    <a href="https://www.youtube.com/channel/UC42lGP9CzM0j11nXtEfxZLgl" target="_blank"><img src="{{ asset('images/youtube.png') }}" alt=""></a>
+                    <a href="https://www.tiktok.com/@academiedeselites237?lang=fr" target="_blank"><img src="{{ asset('images/tiktok.png') }}" alt=""></a>
+                    <a href="about.html" target="_blank"><img src="{{ asset('images/linkedin.png') }}" alt=""></a>
+                    <a href="https://www.instagram.com/elitesacademiedes/" target="_blank"><img src="{{ asset('images/instagram.png') }}" alt=""></a>
                 </div>
 
             </div>

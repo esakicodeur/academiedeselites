@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\About;
 use App\Models\Contact;
+use App\Models\Faq;
 use App\Models\Newsletter;
 use App\Models\Policy;
 use App\Models\Post;
@@ -15,22 +16,28 @@ use Illuminate\Http\Request;
 class PagesController extends Controller
 {
     public function home() {
-        return view('pages.home');
+        return view('pages.home', [
+            'faqs' => Faq::all()
+        ]);
     }
 
     public function about() {
         return view('pages.about', [
-            'abouts' => About::all()
+            'abouts' => About::all(),
+            'faqs' => Faq::all()
         ]);
     }
 
     public function services() {
-        return view('pages.services');
+        return view('pages.services', [
+            'faqs' => Faq::all()
+        ]);
     }
 
     public function policy() {
         return view('pages.policy', [
-            'policies' => Policy::all()
+            'policies' => Policy::all(),
+            'faqs' => Faq::all()
         ]);
     }
 

@@ -64,6 +64,9 @@
                         <li class="list-group-item">
                             <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.about.index') }}"><i class="fas fa-building"></i> A propos</a>
                         </li>
+                        <li class="list-group-item">
+                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.faq.index') }}"><i class="fas fa-pen"></i> Faq</a>
+                        </li>
                     </ul>
                 </div>
             </div>

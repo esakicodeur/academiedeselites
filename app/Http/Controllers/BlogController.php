@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\SearchPostsRequest;
 use App\Models\Category;
+use App\Models\Faq;
 use App\Models\Post;
 use App\Models\Tag;
 use Illuminate\Http\Request;
@@ -20,6 +21,7 @@ class BlogController extends Controller
             'posts' => $query->paginate(4),
             'input' => $request->validated(),
             'categories' => Category::select('id', 'name')->get(),
+            'faqs' => Faq::all()
         ]);
     }
 
