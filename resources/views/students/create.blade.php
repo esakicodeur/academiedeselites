@@ -201,6 +201,7 @@
             <div class="form-six form-step">
                 <div class="bg-svg"></div>
                 <h2>Conditions d'utilisation : *</h2>
+                <a href="{{ route('conditions') }}" target="_blank">Conditions à accepter.</a>
                 <p>En cochant cette case, j'accepte les conditions d'utilisation de la plateforme d'assistance scolaire en ligne et je m'engage a respecter les règles et les normes de conduite établies par la plateforme.</p>
                 <div class="checkbox">
                     <div class="form-check form-switch">

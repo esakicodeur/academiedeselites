@@ -17,6 +17,7 @@ use App\Http\Controllers\Admin\SettingsController;
 use App\Http\Controllers\Admin\TagsController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CommentController;
+use App\Http\Controllers\ConditionsController;
 use App\Http\Controllers\ContactsController;
 use App\Http\Controllers\FavoriteController;
 use App\Http\Controllers\NewsletterController;
@@ -61,6 +62,7 @@ Route::post('/newsletter', [NewsletterController::class, 'store'])->name('newsle
 // Student routes
 Route::get('/student', [StudentsController::class, 'create'])->name('student.create');
 Route::post('/student', [StudentsController::class, 'store'])->name('student.store');
+Route::get('/conditions', [ConditionsController::class, 'index'])->name('conditions');
 
 // Teacher routes
 Route::get('/teacher', [TeachersController::class, 'create'])->name('teacher.create');
