@@ -189,7 +189,7 @@
                 </div>
                 <div class="form-group">
                     <label class="form-label" for="etablissement_actuel">Etablissement scolaire actuel.</label>
-                    <input class="form-control @error('etablissement_actuel') is-invalid @enderror" type="text" name="etablissement_actuel" id="etablissement_actuel" placeholder="e.g Lycée de Majo" value="{{ old('etablissement_actuel') }}">
+                    <input class="form-control @error('etablissement_actuel') is-invalid @enderror" type="text" name="etablissement_actuel" id="etablissement_actuel" placeholder="e.g Lycée de Manjo" value="{{ old('etablissement_actuel') }}">
                     @error('etablissement_actuel')
                         <span class="invalid-feedback">
                             {{ $message }}

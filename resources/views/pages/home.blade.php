@@ -25,7 +25,7 @@
                 </div>
                 <h2>Faire preuve d'audace en apprenant autrement, en s'épanouissant et en se divertissant.</h2>
                 <div class="vision">
-                    Notre vision
+                    Notre ambition
                 </div>
                 <p>Participer à notre manière à rendre l'éducation et l'instruction accessible à tous par la création d'une école virtuelle.</p>
             </div>

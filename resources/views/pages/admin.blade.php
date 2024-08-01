@@ -67,6 +67,9 @@
                         <li class="list-group-item">
                             <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.faq.index') }}"><i class="fas fa-pen"></i> Faq</a>
                         </li>
+                        <li class="list-group-item">
+                            <a class="text-decoration-none text-primary fw-bold" href="{{ route('admin.hero.index') }}"><i class="fas fa-home"></i> Hero</a>
+                        </li>
                     </ul>
                 </div>
             </div>

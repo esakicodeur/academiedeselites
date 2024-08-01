@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\CommentsController;
 use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\FavoritesController;
+use App\Http\Controllers\Admin\HeroController;
 use App\Http\Controllers\Admin\InformationController;
 use App\Http\Controllers\Admin\JourController;
 use App\Http\Controllers\Admin\MatiereController;
@@ -92,6 +93,7 @@ Route::prefix('admin')->name('admin.')->middleware(['auth', 'role:admin'])->grou
     Route::resource('policy', PolicyController::class)->except(['show']);
     Route::resource('about', AboutController::class)->except(['show']);
     Route::resource('faq', FaqController::class)->except(['show']);
+    Route::resource('hero', HeroController::class)->except(['show']);
 
     Route::get('/newsletter', [NewsletterController::class, 'index'])->name('newsletter.index');
 

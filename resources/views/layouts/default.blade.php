@@ -19,7 +19,7 @@
             <!-- End of navigation -->
 
             @if (Route::is('home'))
-                <x-hero-section />
+                <x-hero-section :heroes="$heroes" />
             @elseif (Route::is('about'))
                 <x-hero-section-about :abouts="$abouts" />
             @elseif (Route::is('services'))

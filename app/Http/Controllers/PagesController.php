@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\About;
 use App\Models\Contact;
 use App\Models\Faq;
+use App\Models\Hero;
 use App\Models\Newsletter;
 use App\Models\Policy;
 use App\Models\Post;
@@ -17,7 +18,8 @@ class PagesController extends Controller
 {
     public function home() {
         return view('pages.home', [
-            'faqs' => Faq::all()
+            'faqs' => Faq::all(),
+            'heroes' => Hero::all()
         ]);
     }
 
