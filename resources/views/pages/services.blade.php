@@ -11,36 +11,37 @@
         <div class="wrapper">
             <section class="section-one">
                 <div class="section-down">
-                    <img src="{{ asset('images/service-img-3.png') }}" alt="mage-section">
+                    {{-- <img src="{{ asset('images/service-img-3.png') }}" alt="mage-section"> --}}
 
-                    <div class="right">
-                        <div class="text-center">
-                            <h6>Une plateforme d'enseignement innovante</h6>
-                            <p>Utiliser votre ordinateur de bureau ou votre appareil portable pour profiter des atouts de notre plateforme.</p>
-                        </div>
-                        <div class="text-center">
-                            <h6>Des professeurs experimentés</h6>
-                            <p>Des cours de qualité, des séances de TDs animées par des experts pour la reprise de la confiance et l'obtention de meileures notes</p>
-                        </div>
-                        <div class="text-center">
-                            <h6>Pour les élèves du primaire et du sécondaire</h6>
-                            <p>Nos professeurs maitrisent les programmes, la pédagogie, les exigences de chaque gouvernement en matière d'éducation et sont prèts à accompagner les élèves tout au long de leur cursus scolaire.</p>
-                        </div>
-                        <div class="text-center">
-                            <h6>Le bon professeur mène toujours à de bons résultats</h6>
-                            <p>Apprendre est unique à chacun : De son rythme et de son style d'apprentissage, nous choisissons des professeurs particuliers sur mesure.</p>
-                        </div>
+                    <div class="row">
+                            <div class="card-ade-group col-md-6">
+                                <div class="text-center card-ade">
+                                    <h3>Pour les élèves du primaire et du sécondaire</h3>
+                                    <p>Nos professeurs maitrisent les programmes, la pédagogie, les exigences de chaque gouvernement en matière d'éducation et sont prèts à accompagner les élèves tout au long de leur cursus scolaire.</p>
+                                </div>
+
+                                <div class="text-center card-ade">
+                                    <h3>Des professeurs experimentés</h3>
+                                    <p>Des cours de qualité, des séances de TDs animées par des experts pour la reprise de la confiance et l'obtention de meileures notes</p>
+                                </div>
+                            </div>
+
+                            <div class="card-ade-group col-md-6">
+                                <div class="text-center card-ade">
+                                    <h3>Une plateforme d'enseignement innovante</h3>
+                                    <p>Utiliser votre ordinateur de bureau ou votre appareil portable pour profiter des atouts de notre plateforme.</p>
+                                </div>
+                                <div class="text-center card-ade">
+                                    <h3>Le bon professeur mène toujours à de bons résultats</h3>
+                                    <p>Apprendre est unique à chacun : De son rythme et de son style d'apprentissage, nous choisissons des professeurs particuliers sur mesure.</p>
+                                </div>
+                            </div>
                     </div>
+
                 </div>
             </section>
         </div>
 
-        <h4 class="text-center fw-bold">
-            <code>
-                <p>De la haine à l'amour, revolutionnez votre approche d'apprentissage.</p>
-                <p>La meilleure approche pour transformer votre matière la plus detestée en votre préférée.</p>
-            </code>
-        </h4>
     </section>
 </div>
 

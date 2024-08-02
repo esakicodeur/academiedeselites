@@ -4,8 +4,8 @@
 <div class="wrapper">
     <section class="section-one">
         <div class="section-top">
-            <h1>Fondateurs et équipe de direction</h1>
-            <p>Nos fondateurs et notre équipe de direction sont déterminés à révolutionner l’éducation telle que nous la connaissons.</p>
+            <h1>Equipe de direction</h1>
+            <p>Notre équipe de direction est déterminée à révolutionner l’éducation telle que nous la connaissons.</p>
         </div>
 
         <div class="equipe">
@@ -15,7 +15,7 @@
                 </div>
                 <div class="person-content">
                     <h2>Felix Ohswald</h2>
-                    <p>COFONDATEUR ET PDG</p>
+                    <p>MENBRE D'EQUIPE</p>
                 </div>
             </div>
             <div class="person">
@@ -24,7 +24,7 @@
                 </div>
                 <div class="person-content">
                     <h2>Felix Ohswald</h2>
-                    <p>COFONDATEUR ET PDG</p>
+                    <p>MENBRE D'EQUIPE</p>
                 </div>
             </div>
             <div class="person">
@@ -33,7 +33,7 @@
                 </div>
                 <div class="person-content">
                     <h2>Felix Ohswald</h2>
-                    <p>COFONDATEUR ET PDG</p>
+                    <p>MENBRE D'EQUIPE</p>
                 </div>
             </div>
             <div class="person">
@@ -42,7 +42,7 @@
                 </div>
                 <div class="person-content">
                     <h2>Felix Ohswald</h2>
-                    <p>COFONDATEUR ET PDG</p>
+                    <p>MENBRE D'EQUIPE</p>
                 </div>
             </div>
         </div>
