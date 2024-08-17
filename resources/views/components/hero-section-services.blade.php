@@ -12,7 +12,7 @@
     </div>
 
     <div class="right">
-        <img src="images/service-img-2.png" alt="hero-image">
+        <img src="images/service-img-4.png" alt="hero-image">
     </div>
 </div>
 
