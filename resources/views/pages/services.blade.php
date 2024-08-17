@@ -3,12 +3,52 @@
 @section('content')
 <div class="wrapper">
     <section class="section-one">
-        <div class="section-top">
-            <h1>Ce que nous vous proposons</h1>
-            <p>Découvrez comment vous abonner à l’académie des élites, trouver un professeur et réserver des cours pour votre enfant.</p>
-        </div>
-
         <div class="wrapper">
+            <div class="hero-section-services">
+                <div class="section-top">
+                    <h1>
+                        Nos services
+                    </h1>
+                    <p>
+                        Des cours particuliers sur mesure avec des professeurs soigneusement choisis.
+                    </p>
+                </div>
+
+                <div class="service-bloc">
+                    <div class="card-group-1">
+                        <div class="card-service">
+                            <h3>Aide à la résolution de vos exercices</h3>
+                        </div>
+                        <div class="card-service">
+                            <h3>Cours particuliers à domicile</h3>
+                        </div>
+                        <div class="card-service">
+                            <h3>Cours particuliers en ligne</h3>
+                        </div>
+                    </div>
+
+                    <div class="service-img">
+                        <img src="images/service-img.png" alt="service-image">
+                    </div>
+
+                    <div class="card-group-2">
+                        <div class="card-service">
+                            <h3>Cours en ligne en groupe</h3>
+                        </div>
+                        <div class="card-service">
+                            <h3>Cours en groupe dans un centre</h3>
+                        </div>
+                        <div class="card-service">
+                            <h3>Session intensive de rémédiations</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-top">
+                <h1>Ce que nous vous proposons</h1>
+                <p>Découvrez comment vous abonner à l’académie des élites, trouver un professeur et réserver des cours pour votre enfant.</p>
+            </div>
             <section class="section-one">
                 <div class="section-down">
                     {{-- <img src="{{ asset('images/service-img-3.png') }}" alt="mage-section"> --}}
